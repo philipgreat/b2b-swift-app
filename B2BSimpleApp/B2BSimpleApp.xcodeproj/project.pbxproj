@@ -7,14 +7,120 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DC0447C965E1AB16CAD8FD3 /* Pods_B2BSimpleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B85EE1695664711698A2C0E /* Pods_B2BSimpleApp.framework */; };
 		D495E89E1D54EC6F00FCE1C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E89D1D54EC6F00FCE1C2 /* AppDelegate.swift */; };
 		D495E8A01D54EC6F00FCE1C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E89F1D54EC6F00FCE1C2 /* ViewController.swift */; };
 		D495E8A31D54EC6F00FCE1C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D495E8A11D54EC6F00FCE1C2 /* Main.storyboard */; };
 		D495E8A51D54EC6F00FCE1C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D495E8A41D54EC6F00FCE1C2 /* Assets.xcassets */; };
 		D495E8A81D54EC6F00FCE1C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D495E8A61D54EC6F00FCE1C2 /* LaunchScreen.storyboard */; };
+		D495E9161D54ED6F00FCE1C2 /* AccessRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8AF1D54ED6F00FCE1C2 /* AccessRemoteManagerImpl.swift */; };
+		D495E9171D54ED6F00FCE1C2 /* ActionRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8B01D54ED6F00FCE1C2 /* ActionRemoteManagerImpl.swift */; };
+		D495E9181D54ED6F00FCE1C2 /* ApprovalRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8B11D54ED6F00FCE1C2 /* ApprovalRemoteManagerImpl.swift */; };
+		D495E9191D54ED6F00FCE1C2 /* AssignmentRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8B21D54ED6F00FCE1C2 /* AssignmentRemoteManagerImpl.swift */; };
+		D495E91A1D54ED6F00FCE1C2 /* BannerRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8B31D54ED6F00FCE1C2 /* BannerRemoteManagerImpl.swift */; };
+		D495E91B1D54ED6F00FCE1C2 /* BillingAddressRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8B41D54ED6F00FCE1C2 /* BillingAddressRemoteManagerImpl.swift */; };
+		D495E91C1D54ED6F00FCE1C2 /* BuyerCompanyRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8B51D54ED6F00FCE1C2 /* BuyerCompanyRemoteManagerImpl.swift */; };
+		D495E91D1D54ED6F00FCE1C2 /* CatalogRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8B61D54ED6F00FCE1C2 /* CatalogRemoteManagerImpl.swift */; };
+		D495E91E1D54ED6F00FCE1C2 /* ConfirmationRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8B71D54ED6F00FCE1C2 /* ConfirmationRemoteManagerImpl.swift */; };
+		D495E91F1D54ED6F00FCE1C2 /* ContractPriceApprovalRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8B81D54ED6F00FCE1C2 /* ContractPriceApprovalRemoteManagerImpl.swift */; };
+		D495E9201D54ED6F00FCE1C2 /* ContractPriceRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8B91D54ED6F00FCE1C2 /* ContractPriceRemoteManagerImpl.swift */; };
+		D495E9211D54ED6F00FCE1C2 /* ContractPriceReviewRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8BA1D54ED6F00FCE1C2 /* ContractPriceReviewRemoteManagerImpl.swift */; };
+		D495E9221D54ED6F00FCE1C2 /* CostCenterRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8BB1D54ED6F00FCE1C2 /* CostCenterRemoteManagerImpl.swift */; };
+		D495E9231D54ED6F00FCE1C2 /* CreditAccountRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8BC1D54ED6F00FCE1C2 /* CreditAccountRemoteManagerImpl.swift */; };
+		D495E9241D54ED6F00FCE1C2 /* CustSvcRepRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8BD1D54ED6F00FCE1C2 /* CustSvcRepRemoteManagerImpl.swift */; };
+		D495E9251D54ED6F00FCE1C2 /* DeliveryRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8BE1D54ED6F00FCE1C2 /* DeliveryRemoteManagerImpl.swift */; };
+		D495E9261D54ED6F00FCE1C2 /* EmployeeRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8BF1D54ED6F00FCE1C2 /* EmployeeRemoteManagerImpl.swift */; };
+		D495E9271D54ED6F00FCE1C2 /* FixRiceSkuPromotionRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8C01D54ED6F00FCE1C2 /* FixRiceSkuPromotionRemoteManagerImpl.swift */; };
+		D495E9281D54ED6F00FCE1C2 /* FooterRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8C11D54ED6F00FCE1C2 /* FooterRemoteManagerImpl.swift */; };
+		D495E9291D54ED6F00FCE1C2 /* HeaderRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8C21D54ED6F00FCE1C2 /* HeaderRemoteManagerImpl.swift */; };
+		D495E92A1D54ED6F00FCE1C2 /* HomePageRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8C31D54ED6F00FCE1C2 /* HomePageRemoteManagerImpl.swift */; };
+		D495E92B1D54ED6F00FCE1C2 /* InventoryRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8C41D54ED6F00FCE1C2 /* InventoryRemoteManagerImpl.swift */; };
+		D495E92C1D54ED6F00FCE1C2 /* LevelFiveCatRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8C51D54ED6F00FCE1C2 /* LevelFiveCatRemoteManagerImpl.swift */; };
+		D495E92D1D54ED6F00FCE1C2 /* LevelFourCatRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8C61D54ED6F00FCE1C2 /* LevelFourCatRemoteManagerImpl.swift */; };
+		D495E92E1D54ED6F00FCE1C2 /* LevelNCatRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8C71D54ED6F00FCE1C2 /* LevelNCatRemoteManagerImpl.swift */; };
+		D495E92F1D54ED6F00FCE1C2 /* LevelOneCatRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8C81D54ED6F00FCE1C2 /* LevelOneCatRemoteManagerImpl.swift */; };
+		D495E9301D54ED6F00FCE1C2 /* LevelThreeCatRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8C91D54ED6F00FCE1C2 /* LevelThreeCatRemoteManagerImpl.swift */; };
+		D495E9311D54ED6F00FCE1C2 /* LevelTwoCatRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8CA1D54ED6F00FCE1C2 /* LevelTwoCatRemoteManagerImpl.swift */; };
+		D495E9321D54ED6F00FCE1C2 /* LineItemRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8CB1D54ED6F00FCE1C2 /* LineItemRemoteManagerImpl.swift */; };
+		D495E9331D54ED6F00FCE1C2 /* MarketingBannerRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8CC1D54ED6F00FCE1C2 /* MarketingBannerRemoteManagerImpl.swift */; };
+		D495E9341D54ED6F00FCE1C2 /* MarketingLandingRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8CD1D54ED6F00FCE1C2 /* MarketingLandingRemoteManagerImpl.swift */; };
+		D495E9351D54ED6F00FCE1C2 /* NaviRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8CE1D54ED6F00FCE1C2 /* NaviRemoteManagerImpl.swift */; };
+		D495E9361D54ED6F00FCE1C2 /* OrderRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8CF1D54ED6F00FCE1C2 /* OrderRemoteManagerImpl.swift */; };
+		D495E9371D54ED6F00FCE1C2 /* PaymentGroupRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8D01D54ED6F00FCE1C2 /* PaymentGroupRemoteManagerImpl.swift */; };
+		D495E9381D54ED6F00FCE1C2 /* ProcessingRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8D11D54ED6F00FCE1C2 /* ProcessingRemoteManagerImpl.swift */; };
+		D495E9391D54ED6F00FCE1C2 /* ProductRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8D21D54ED6F00FCE1C2 /* ProductRemoteManagerImpl.swift */; };
+		D495E93A1D54ED6F00FCE1C2 /* ProfitCenterRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8D31D54ED6F00FCE1C2 /* ProfitCenterRemoteManagerImpl.swift */; };
+		D495E93B1D54ED6F00FCE1C2 /* RecurringInfoRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8D41D54ED6F00FCE1C2 /* RecurringInfoRemoteManagerImpl.swift */; };
+		D495E93C1D54ED6F00FCE1C2 /* RoleRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8D51D54ED6F00FCE1C2 /* RoleRemoteManagerImpl.swift */; };
+		D495E93D1D54ED6F00FCE1C2 /* SellerCompanyRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8D61D54ED6F00FCE1C2 /* SellerCompanyRemoteManagerImpl.swift */; };
+		D495E93E1D54ED6F00FCE1C2 /* SellerSiteRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8D71D54ED6F00FCE1C2 /* SellerSiteRemoteManagerImpl.swift */; };
+		D495E93F1D54ED6F00FCE1C2 /* ShipmentRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8D81D54ED6F00FCE1C2 /* ShipmentRemoteManagerImpl.swift */; };
+		D495E9401D54ED6F00FCE1C2 /* ShippingAddressRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8D91D54ED6F00FCE1C2 /* ShippingAddressRemoteManagerImpl.swift */; };
+		D495E9411D54ED6F00FCE1C2 /* ShippingGroupRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8DA1D54ED6F00FCE1C2 /* ShippingGroupRemoteManagerImpl.swift */; };
+		D495E9421D54ED6F00FCE1C2 /* UniversalPriceApprovalRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8DB1D54ED6F00FCE1C2 /* UniversalPriceApprovalRemoteManagerImpl.swift */; };
+		D495E9431D54ED6F00FCE1C2 /* UniversalPriceRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8DC1D54ED6F00FCE1C2 /* UniversalPriceRemoteManagerImpl.swift */; };
+		D495E9441D54ED6F00FCE1C2 /* UniversalPriceReviewRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8DD1D54ED6F00FCE1C2 /* UniversalPriceReviewRemoteManagerImpl.swift */; };
+		D495E9451D54ED6F00FCE1C2 /* WarehouseRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8DE1D54ED6F00FCE1C2 /* WarehouseRemoteManagerImpl.swift */; };
+		D495E9461D54ED6F00FCE1C2 /* Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8DF1D54ED6F00FCE1C2 /* Access.swift */; };
+		D495E9471D54ED6F00FCE1C2 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E01D54ED6F00FCE1C2 /* Action.swift */; };
+		D495E9481D54ED6F00FCE1C2 /* Approval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E11D54ED6F00FCE1C2 /* Approval.swift */; };
+		D495E9491D54ED6F00FCE1C2 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E21D54ED6F00FCE1C2 /* Assignment.swift */; };
+		D495E94A1D54ED6F00FCE1C2 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E31D54ED6F00FCE1C2 /* Banner.swift */; };
+		D495E94B1D54ED6F00FCE1C2 /* BillingAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E41D54ED6F00FCE1C2 /* BillingAddress.swift */; };
+		D495E94C1D54ED6F00FCE1C2 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E51D54ED6F00FCE1C2 /* Brand.swift */; };
+		D495E94D1D54ED6F00FCE1C2 /* BrandRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E61D54ED6F00FCE1C2 /* BrandRemoteManagerImpl.swift */; };
+		D495E94E1D54ED6F00FCE1C2 /* BuyerCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E71D54ED6F00FCE1C2 /* BuyerCompany.swift */; };
+		D495E94F1D54ED6F00FCE1C2 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E81D54ED6F00FCE1C2 /* Catalog.swift */; };
+		D495E9511D54ED6F00FCE1C2 /* Confirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8EA1D54ED6F00FCE1C2 /* Confirmation.swift */; };
+		D495E9521D54ED6F00FCE1C2 /* ContractPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8EB1D54ED6F00FCE1C2 /* ContractPrice.swift */; };
+		D495E9531D54ED6F00FCE1C2 /* ContractPriceApproval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8EC1D54ED6F00FCE1C2 /* ContractPriceApproval.swift */; };
+		D495E9541D54ED6F00FCE1C2 /* ContractPriceReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8ED1D54ED6F00FCE1C2 /* ContractPriceReview.swift */; };
+		D495E9551D54ED6F00FCE1C2 /* CostCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8EE1D54ED6F00FCE1C2 /* CostCenter.swift */; };
+		D495E9561D54ED6F00FCE1C2 /* CreditAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8EF1D54ED6F00FCE1C2 /* CreditAccount.swift */; };
+		D495E9571D54ED6F00FCE1C2 /* CustSvcRep.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8F01D54ED6F00FCE1C2 /* CustSvcRep.swift */; };
+		D495E9581D54ED6F00FCE1C2 /* Delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8F11D54ED6F00FCE1C2 /* Delivery.swift */; };
+		D495E9591D54ED6F00FCE1C2 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8F21D54ED6F00FCE1C2 /* Employee.swift */; };
+		D495E95A1D54ED6F00FCE1C2 /* FixRiceSkuPromotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8F31D54ED6F00FCE1C2 /* FixRiceSkuPromotion.swift */; };
+		D495E95B1D54ED6F00FCE1C2 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8F41D54ED6F00FCE1C2 /* Footer.swift */; };
+		D495E95C1D54ED6F00FCE1C2 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8F51D54ED6F00FCE1C2 /* Header.swift */; };
+		D495E95D1D54ED6F00FCE1C2 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8F61D54ED6F00FCE1C2 /* HomePage.swift */; };
+		D495E95E1D54ED6F00FCE1C2 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8F71D54ED6F00FCE1C2 /* Inventory.swift */; };
+		D495E95F1D54ED6F00FCE1C2 /* LevelFiveCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8F81D54ED6F00FCE1C2 /* LevelFiveCat.swift */; };
+		D495E9601D54ED6F00FCE1C2 /* LevelFourCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8F91D54ED6F00FCE1C2 /* LevelFourCat.swift */; };
+		D495E9611D54ED6F00FCE1C2 /* LevelNCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8FA1D54ED6F00FCE1C2 /* LevelNCat.swift */; };
+		D495E9621D54ED6F00FCE1C2 /* LevelOneCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8FB1D54ED6F00FCE1C2 /* LevelOneCat.swift */; };
+		D495E9631D54ED6F00FCE1C2 /* LevelThreeCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8FC1D54ED6F00FCE1C2 /* LevelThreeCat.swift */; };
+		D495E9641D54ED6F00FCE1C2 /* LevelTwoCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8FD1D54ED6F00FCE1C2 /* LevelTwoCat.swift */; };
+		D495E9651D54ED6F00FCE1C2 /* LineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8FE1D54ED6F00FCE1C2 /* LineItem.swift */; };
+		D495E9661D54ED6F00FCE1C2 /* MarketingBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8FF1D54ED6F00FCE1C2 /* MarketingBanner.swift */; };
+		D495E9671D54ED6F00FCE1C2 /* MarketingLanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9001D54ED6F00FCE1C2 /* MarketingLanding.swift */; };
+		D495E9681D54ED6F00FCE1C2 /* Navi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9011D54ED6F00FCE1C2 /* Navi.swift */; };
+		D495E9691D54ED6F00FCE1C2 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9021D54ED6F00FCE1C2 /* Order.swift */; };
+		D495E96A1D54ED6F00FCE1C2 /* PaymentGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9031D54ED6F00FCE1C2 /* PaymentGroup.swift */; };
+		D495E96B1D54ED6F00FCE1C2 /* Processing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9041D54ED6F00FCE1C2 /* Processing.swift */; };
+		D495E96C1D54ED6F00FCE1C2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9051D54ED6F00FCE1C2 /* Product.swift */; };
+		D495E96D1D54ED6F00FCE1C2 /* ProfitCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9061D54ED6F00FCE1C2 /* ProfitCenter.swift */; };
+		D495E96E1D54ED6F00FCE1C2 /* RecurringInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9071D54ED6F00FCE1C2 /* RecurringInfo.swift */; };
+		D495E96F1D54ED6F00FCE1C2 /* RemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9081D54ED6F00FCE1C2 /* RemoteManagerImpl.swift */; };
+		D495E9701D54ED6F00FCE1C2 /* Role.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9091D54ED6F00FCE1C2 /* Role.swift */; };
+		D495E9711D54ED6F00FCE1C2 /* SellerCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E90A1D54ED6F00FCE1C2 /* SellerCompany.swift */; };
+		D495E9721D54ED6F00FCE1C2 /* SellerSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E90B1D54ED6F00FCE1C2 /* SellerSite.swift */; };
+		D495E9731D54ED6F00FCE1C2 /* Shipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E90C1D54ED6F00FCE1C2 /* Shipment.swift */; };
+		D495E9741D54ED6F00FCE1C2 /* ShippingAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E90D1D54ED6F00FCE1C2 /* ShippingAddress.swift */; };
+		D495E9751D54ED6F00FCE1C2 /* ShippingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E90E1D54ED6F00FCE1C2 /* ShippingGroup.swift */; };
+		D495E9761D54ED6F00FCE1C2 /* Sku.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E90F1D54ED6F00FCE1C2 /* Sku.swift */; };
+		D495E9771D54ED6F00FCE1C2 /* SkuRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9101D54ED6F00FCE1C2 /* SkuRemoteManagerImpl.swift */; };
+		D495E9781D54ED6F00FCE1C2 /* SwiftyJSONTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9111D54ED6F00FCE1C2 /* SwiftyJSONTool.swift */; };
+		D495E9791D54ED6F00FCE1C2 /* UniversalPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9121D54ED6F00FCE1C2 /* UniversalPrice.swift */; };
+		D495E97A1D54ED6F00FCE1C2 /* UniversalPriceApproval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9131D54ED6F00FCE1C2 /* UniversalPriceApproval.swift */; };
+		D495E97B1D54ED6F00FCE1C2 /* UniversalPriceReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9141D54ED6F00FCE1C2 /* UniversalPriceReview.swift */; };
+		D495E97C1D54ED6F00FCE1C2 /* Warehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E9151D54ED6F00FCE1C2 /* Warehouse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03CBBC23C349AEC72EAB9B43 /* Pods-B2BSimpleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B2BSimpleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-B2BSimpleApp/Pods-B2BSimpleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		1B85EE1695664711698A2C0E /* Pods_B2BSimpleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_B2BSimpleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A97BBA2AC19C0EF0A3B1DF80 /* Pods-B2BSimpleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B2BSimpleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-B2BSimpleApp/Pods-B2BSimpleApp.release.xcconfig"; sourceTree = "<group>"; };
 		D495E89A1D54EC6F00FCE1C2 /* B2BSimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = B2BSimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D495E89D1D54EC6F00FCE1C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D495E89F1D54EC6F00FCE1C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +128,108 @@
 		D495E8A41D54EC6F00FCE1C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D495E8A71D54EC6F00FCE1C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D495E8A91D54EC6F00FCE1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D495E8AF1D54ED6F00FCE1C2 /* AccessRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8B01D54ED6F00FCE1C2 /* ActionRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8B11D54ED6F00FCE1C2 /* ApprovalRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprovalRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8B21D54ED6F00FCE1C2 /* AssignmentRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8B31D54ED6F00FCE1C2 /* BannerRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8B41D54ED6F00FCE1C2 /* BillingAddressRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillingAddressRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8B51D54ED6F00FCE1C2 /* BuyerCompanyRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyerCompanyRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8B61D54ED6F00FCE1C2 /* CatalogRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8B71D54ED6F00FCE1C2 /* ConfirmationRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8B81D54ED6F00FCE1C2 /* ContractPriceApprovalRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractPriceApprovalRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8B91D54ED6F00FCE1C2 /* ContractPriceRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractPriceRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8BA1D54ED6F00FCE1C2 /* ContractPriceReviewRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractPriceReviewRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8BB1D54ED6F00FCE1C2 /* CostCenterRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostCenterRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8BC1D54ED6F00FCE1C2 /* CreditAccountRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditAccountRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8BD1D54ED6F00FCE1C2 /* CustSvcRepRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustSvcRepRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8BE1D54ED6F00FCE1C2 /* DeliveryRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliveryRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8BF1D54ED6F00FCE1C2 /* EmployeeRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8C01D54ED6F00FCE1C2 /* FixRiceSkuPromotionRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixRiceSkuPromotionRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8C11D54ED6F00FCE1C2 /* FooterRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8C21D54ED6F00FCE1C2 /* HeaderRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8C31D54ED6F00FCE1C2 /* HomePageRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8C41D54ED6F00FCE1C2 /* InventoryRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8C51D54ED6F00FCE1C2 /* LevelFiveCatRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelFiveCatRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8C61D54ED6F00FCE1C2 /* LevelFourCatRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelFourCatRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8C71D54ED6F00FCE1C2 /* LevelNCatRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelNCatRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8C81D54ED6F00FCE1C2 /* LevelOneCatRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelOneCatRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8C91D54ED6F00FCE1C2 /* LevelThreeCatRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelThreeCatRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8CA1D54ED6F00FCE1C2 /* LevelTwoCatRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelTwoCatRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8CB1D54ED6F00FCE1C2 /* LineItemRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineItemRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8CC1D54ED6F00FCE1C2 /* MarketingBannerRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketingBannerRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8CD1D54ED6F00FCE1C2 /* MarketingLandingRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketingLandingRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8CE1D54ED6F00FCE1C2 /* NaviRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NaviRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8CF1D54ED6F00FCE1C2 /* OrderRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8D01D54ED6F00FCE1C2 /* PaymentGroupRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentGroupRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8D11D54ED6F00FCE1C2 /* ProcessingRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProcessingRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8D21D54ED6F00FCE1C2 /* ProductRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8D31D54ED6F00FCE1C2 /* ProfitCenterRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitCenterRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8D41D54ED6F00FCE1C2 /* RecurringInfoRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringInfoRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8D51D54ED6F00FCE1C2 /* RoleRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoleRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8D61D54ED6F00FCE1C2 /* SellerCompanyRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellerCompanyRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8D71D54ED6F00FCE1C2 /* SellerSiteRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellerSiteRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8D81D54ED6F00FCE1C2 /* ShipmentRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipmentRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8D91D54ED6F00FCE1C2 /* ShippingAddressRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingAddressRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8DA1D54ED6F00FCE1C2 /* ShippingGroupRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingGroupRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8DB1D54ED6F00FCE1C2 /* UniversalPriceApprovalRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversalPriceApprovalRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8DC1D54ED6F00FCE1C2 /* UniversalPriceRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversalPriceRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8DD1D54ED6F00FCE1C2 /* UniversalPriceReviewRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversalPriceReviewRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8DE1D54ED6F00FCE1C2 /* WarehouseRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarehouseRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8DF1D54ED6F00FCE1C2 /* Access.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Access.swift; sourceTree = "<group>"; };
+		D495E8E01D54ED6F00FCE1C2 /* Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		D495E8E11D54ED6F00FCE1C2 /* Approval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Approval.swift; sourceTree = "<group>"; };
+		D495E8E21D54ED6F00FCE1C2 /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
+		D495E8E31D54ED6F00FCE1C2 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		D495E8E41D54ED6F00FCE1C2 /* BillingAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillingAddress.swift; sourceTree = "<group>"; };
+		D495E8E51D54ED6F00FCE1C2 /* Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
+		D495E8E61D54ED6F00FCE1C2 /* BrandRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E8E71D54ED6F00FCE1C2 /* BuyerCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyerCompany.swift; sourceTree = "<group>"; };
+		D495E8E81D54ED6F00FCE1C2 /* Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		D495E8EA1D54ED6F00FCE1C2 /* Confirmation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Confirmation.swift; sourceTree = "<group>"; };
+		D495E8EB1D54ED6F00FCE1C2 /* ContractPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractPrice.swift; sourceTree = "<group>"; };
+		D495E8EC1D54ED6F00FCE1C2 /* ContractPriceApproval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractPriceApproval.swift; sourceTree = "<group>"; };
+		D495E8ED1D54ED6F00FCE1C2 /* ContractPriceReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractPriceReview.swift; sourceTree = "<group>"; };
+		D495E8EE1D54ED6F00FCE1C2 /* CostCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostCenter.swift; sourceTree = "<group>"; };
+		D495E8EF1D54ED6F00FCE1C2 /* CreditAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditAccount.swift; sourceTree = "<group>"; };
+		D495E8F01D54ED6F00FCE1C2 /* CustSvcRep.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustSvcRep.swift; sourceTree = "<group>"; };
+		D495E8F11D54ED6F00FCE1C2 /* Delivery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delivery.swift; sourceTree = "<group>"; };
+		D495E8F21D54ED6F00FCE1C2 /* Employee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		D495E8F31D54ED6F00FCE1C2 /* FixRiceSkuPromotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FixRiceSkuPromotion.swift; sourceTree = "<group>"; };
+		D495E8F41D54ED6F00FCE1C2 /* Footer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
+		D495E8F51D54ED6F00FCE1C2 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		D495E8F61D54ED6F00FCE1C2 /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		D495E8F71D54ED6F00FCE1C2 /* Inventory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		D495E8F81D54ED6F00FCE1C2 /* LevelFiveCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelFiveCat.swift; sourceTree = "<group>"; };
+		D495E8F91D54ED6F00FCE1C2 /* LevelFourCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelFourCat.swift; sourceTree = "<group>"; };
+		D495E8FA1D54ED6F00FCE1C2 /* LevelNCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelNCat.swift; sourceTree = "<group>"; };
+		D495E8FB1D54ED6F00FCE1C2 /* LevelOneCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelOneCat.swift; sourceTree = "<group>"; };
+		D495E8FC1D54ED6F00FCE1C2 /* LevelThreeCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelThreeCat.swift; sourceTree = "<group>"; };
+		D495E8FD1D54ED6F00FCE1C2 /* LevelTwoCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelTwoCat.swift; sourceTree = "<group>"; };
+		D495E8FE1D54ED6F00FCE1C2 /* LineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineItem.swift; sourceTree = "<group>"; };
+		D495E8FF1D54ED6F00FCE1C2 /* MarketingBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketingBanner.swift; sourceTree = "<group>"; };
+		D495E9001D54ED6F00FCE1C2 /* MarketingLanding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketingLanding.swift; sourceTree = "<group>"; };
+		D495E9011D54ED6F00FCE1C2 /* Navi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navi.swift; sourceTree = "<group>"; };
+		D495E9021D54ED6F00FCE1C2 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		D495E9031D54ED6F00FCE1C2 /* PaymentGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentGroup.swift; sourceTree = "<group>"; };
+		D495E9041D54ED6F00FCE1C2 /* Processing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Processing.swift; sourceTree = "<group>"; };
+		D495E9051D54ED6F00FCE1C2 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		D495E9061D54ED6F00FCE1C2 /* ProfitCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitCenter.swift; sourceTree = "<group>"; };
+		D495E9071D54ED6F00FCE1C2 /* RecurringInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecurringInfo.swift; sourceTree = "<group>"; };
+		D495E9081D54ED6F00FCE1C2 /* RemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E9091D54ED6F00FCE1C2 /* Role.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Role.swift; sourceTree = "<group>"; };
+		D495E90A1D54ED6F00FCE1C2 /* SellerCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellerCompany.swift; sourceTree = "<group>"; };
+		D495E90B1D54ED6F00FCE1C2 /* SellerSite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SellerSite.swift; sourceTree = "<group>"; };
+		D495E90C1D54ED6F00FCE1C2 /* Shipment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shipment.swift; sourceTree = "<group>"; };
+		D495E90D1D54ED6F00FCE1C2 /* ShippingAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingAddress.swift; sourceTree = "<group>"; };
+		D495E90E1D54ED6F00FCE1C2 /* ShippingGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShippingGroup.swift; sourceTree = "<group>"; };
+		D495E90F1D54ED6F00FCE1C2 /* Sku.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sku.swift; sourceTree = "<group>"; };
+		D495E9101D54ED6F00FCE1C2 /* SkuRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkuRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D495E9111D54ED6F00FCE1C2 /* SwiftyJSONTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSONTool.swift; sourceTree = "<group>"; };
+		D495E9121D54ED6F00FCE1C2 /* UniversalPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversalPrice.swift; sourceTree = "<group>"; };
+		D495E9131D54ED6F00FCE1C2 /* UniversalPriceApproval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversalPriceApproval.swift; sourceTree = "<group>"; };
+		D495E9141D54ED6F00FCE1C2 /* UniversalPriceReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversalPriceReview.swift; sourceTree = "<group>"; };
+		D495E9151D54ED6F00FCE1C2 /* Warehouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Warehouse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +237,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC0447C965E1AB16CAD8FD3 /* Pods_B2BSimpleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B882ABD8FA211A5E1186B93 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03CBBC23C349AEC72EAB9B43 /* Pods-B2BSimpleApp.debug.xcconfig */,
+				A97BBA2AC19C0EF0A3B1DF80 /* Pods-B2BSimpleApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		935ACEE59FB3B9012A0DCDFD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B85EE1695664711698A2C0E /* Pods_B2BSimpleApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D495E8911D54EC6F00FCE1C2 = {
 			isa = PBXGroup;
 			children = (
 				D495E89C1D54EC6F00FCE1C2 /* B2BSimpleApp */,
 				D495E89B1D54EC6F00FCE1C2 /* Products */,
+				3B882ABD8FA211A5E1186B93 /* Pods */,
+				935ACEE59FB3B9012A0DCDFD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +282,108 @@
 		D495E89C1D54EC6F00FCE1C2 /* B2BSimpleApp */ = {
 			isa = PBXGroup;
 			children = (
+				D495E8AF1D54ED6F00FCE1C2 /* AccessRemoteManagerImpl.swift */,
+				D495E8B01D54ED6F00FCE1C2 /* ActionRemoteManagerImpl.swift */,
+				D495E8B11D54ED6F00FCE1C2 /* ApprovalRemoteManagerImpl.swift */,
+				D495E8B21D54ED6F00FCE1C2 /* AssignmentRemoteManagerImpl.swift */,
+				D495E8B31D54ED6F00FCE1C2 /* BannerRemoteManagerImpl.swift */,
+				D495E8B41D54ED6F00FCE1C2 /* BillingAddressRemoteManagerImpl.swift */,
+				D495E8B51D54ED6F00FCE1C2 /* BuyerCompanyRemoteManagerImpl.swift */,
+				D495E8B61D54ED6F00FCE1C2 /* CatalogRemoteManagerImpl.swift */,
+				D495E8B71D54ED6F00FCE1C2 /* ConfirmationRemoteManagerImpl.swift */,
+				D495E8B81D54ED6F00FCE1C2 /* ContractPriceApprovalRemoteManagerImpl.swift */,
+				D495E8B91D54ED6F00FCE1C2 /* ContractPriceRemoteManagerImpl.swift */,
+				D495E8BA1D54ED6F00FCE1C2 /* ContractPriceReviewRemoteManagerImpl.swift */,
+				D495E8BB1D54ED6F00FCE1C2 /* CostCenterRemoteManagerImpl.swift */,
+				D495E8BC1D54ED6F00FCE1C2 /* CreditAccountRemoteManagerImpl.swift */,
+				D495E8BD1D54ED6F00FCE1C2 /* CustSvcRepRemoteManagerImpl.swift */,
+				D495E8BE1D54ED6F00FCE1C2 /* DeliveryRemoteManagerImpl.swift */,
+				D495E8BF1D54ED6F00FCE1C2 /* EmployeeRemoteManagerImpl.swift */,
+				D495E8C01D54ED6F00FCE1C2 /* FixRiceSkuPromotionRemoteManagerImpl.swift */,
+				D495E8C11D54ED6F00FCE1C2 /* FooterRemoteManagerImpl.swift */,
+				D495E8C21D54ED6F00FCE1C2 /* HeaderRemoteManagerImpl.swift */,
+				D495E8C31D54ED6F00FCE1C2 /* HomePageRemoteManagerImpl.swift */,
+				D495E8C41D54ED6F00FCE1C2 /* InventoryRemoteManagerImpl.swift */,
+				D495E8C51D54ED6F00FCE1C2 /* LevelFiveCatRemoteManagerImpl.swift */,
+				D495E8C61D54ED6F00FCE1C2 /* LevelFourCatRemoteManagerImpl.swift */,
+				D495E8C71D54ED6F00FCE1C2 /* LevelNCatRemoteManagerImpl.swift */,
+				D495E8C81D54ED6F00FCE1C2 /* LevelOneCatRemoteManagerImpl.swift */,
+				D495E8C91D54ED6F00FCE1C2 /* LevelThreeCatRemoteManagerImpl.swift */,
+				D495E8CA1D54ED6F00FCE1C2 /* LevelTwoCatRemoteManagerImpl.swift */,
+				D495E8CB1D54ED6F00FCE1C2 /* LineItemRemoteManagerImpl.swift */,
+				D495E8CC1D54ED6F00FCE1C2 /* MarketingBannerRemoteManagerImpl.swift */,
+				D495E8CD1D54ED6F00FCE1C2 /* MarketingLandingRemoteManagerImpl.swift */,
+				D495E8CE1D54ED6F00FCE1C2 /* NaviRemoteManagerImpl.swift */,
+				D495E8CF1D54ED6F00FCE1C2 /* OrderRemoteManagerImpl.swift */,
+				D495E8D01D54ED6F00FCE1C2 /* PaymentGroupRemoteManagerImpl.swift */,
+				D495E8D11D54ED6F00FCE1C2 /* ProcessingRemoteManagerImpl.swift */,
+				D495E8D21D54ED6F00FCE1C2 /* ProductRemoteManagerImpl.swift */,
+				D495E8D31D54ED6F00FCE1C2 /* ProfitCenterRemoteManagerImpl.swift */,
+				D495E8D41D54ED6F00FCE1C2 /* RecurringInfoRemoteManagerImpl.swift */,
+				D495E8D51D54ED6F00FCE1C2 /* RoleRemoteManagerImpl.swift */,
+				D495E8D61D54ED6F00FCE1C2 /* SellerCompanyRemoteManagerImpl.swift */,
+				D495E8D71D54ED6F00FCE1C2 /* SellerSiteRemoteManagerImpl.swift */,
+				D495E8D81D54ED6F00FCE1C2 /* ShipmentRemoteManagerImpl.swift */,
+				D495E8D91D54ED6F00FCE1C2 /* ShippingAddressRemoteManagerImpl.swift */,
+				D495E8DA1D54ED6F00FCE1C2 /* ShippingGroupRemoteManagerImpl.swift */,
+				D495E8DB1D54ED6F00FCE1C2 /* UniversalPriceApprovalRemoteManagerImpl.swift */,
+				D495E8DC1D54ED6F00FCE1C2 /* UniversalPriceRemoteManagerImpl.swift */,
+				D495E8DD1D54ED6F00FCE1C2 /* UniversalPriceReviewRemoteManagerImpl.swift */,
+				D495E8DE1D54ED6F00FCE1C2 /* WarehouseRemoteManagerImpl.swift */,
+				D495E8DF1D54ED6F00FCE1C2 /* Access.swift */,
+				D495E8E01D54ED6F00FCE1C2 /* Action.swift */,
+				D495E8E11D54ED6F00FCE1C2 /* Approval.swift */,
+				D495E8E21D54ED6F00FCE1C2 /* Assignment.swift */,
+				D495E8E31D54ED6F00FCE1C2 /* Banner.swift */,
+				D495E8E41D54ED6F00FCE1C2 /* BillingAddress.swift */,
+				D495E8E51D54ED6F00FCE1C2 /* Brand.swift */,
+				D495E8E61D54ED6F00FCE1C2 /* BrandRemoteManagerImpl.swift */,
+				D495E8E71D54ED6F00FCE1C2 /* BuyerCompany.swift */,
+				D495E8E81D54ED6F00FCE1C2 /* Catalog.swift */,
+				D495E8EA1D54ED6F00FCE1C2 /* Confirmation.swift */,
+				D495E8EB1D54ED6F00FCE1C2 /* ContractPrice.swift */,
+				D495E8EC1D54ED6F00FCE1C2 /* ContractPriceApproval.swift */,
+				D495E8ED1D54ED6F00FCE1C2 /* ContractPriceReview.swift */,
+				D495E8EE1D54ED6F00FCE1C2 /* CostCenter.swift */,
+				D495E8EF1D54ED6F00FCE1C2 /* CreditAccount.swift */,
+				D495E8F01D54ED6F00FCE1C2 /* CustSvcRep.swift */,
+				D495E8F11D54ED6F00FCE1C2 /* Delivery.swift */,
+				D495E8F21D54ED6F00FCE1C2 /* Employee.swift */,
+				D495E8F31D54ED6F00FCE1C2 /* FixRiceSkuPromotion.swift */,
+				D495E8F41D54ED6F00FCE1C2 /* Footer.swift */,
+				D495E8F51D54ED6F00FCE1C2 /* Header.swift */,
+				D495E8F61D54ED6F00FCE1C2 /* HomePage.swift */,
+				D495E8F71D54ED6F00FCE1C2 /* Inventory.swift */,
+				D495E8F81D54ED6F00FCE1C2 /* LevelFiveCat.swift */,
+				D495E8F91D54ED6F00FCE1C2 /* LevelFourCat.swift */,
+				D495E8FA1D54ED6F00FCE1C2 /* LevelNCat.swift */,
+				D495E8FB1D54ED6F00FCE1C2 /* LevelOneCat.swift */,
+				D495E8FC1D54ED6F00FCE1C2 /* LevelThreeCat.swift */,
+				D495E8FD1D54ED6F00FCE1C2 /* LevelTwoCat.swift */,
+				D495E8FE1D54ED6F00FCE1C2 /* LineItem.swift */,
+				D495E8FF1D54ED6F00FCE1C2 /* MarketingBanner.swift */,
+				D495E9001D54ED6F00FCE1C2 /* MarketingLanding.swift */,
+				D495E9011D54ED6F00FCE1C2 /* Navi.swift */,
+				D495E9021D54ED6F00FCE1C2 /* Order.swift */,
+				D495E9031D54ED6F00FCE1C2 /* PaymentGroup.swift */,
+				D495E9041D54ED6F00FCE1C2 /* Processing.swift */,
+				D495E9051D54ED6F00FCE1C2 /* Product.swift */,
+				D495E9061D54ED6F00FCE1C2 /* ProfitCenter.swift */,
+				D495E9071D54ED6F00FCE1C2 /* RecurringInfo.swift */,
+				D495E9081D54ED6F00FCE1C2 /* RemoteManagerImpl.swift */,
+				D495E9091D54ED6F00FCE1C2 /* Role.swift */,
+				D495E90A1D54ED6F00FCE1C2 /* SellerCompany.swift */,
+				D495E90B1D54ED6F00FCE1C2 /* SellerSite.swift */,
+				D495E90C1D54ED6F00FCE1C2 /* Shipment.swift */,
+				D495E90D1D54ED6F00FCE1C2 /* ShippingAddress.swift */,
+				D495E90E1D54ED6F00FCE1C2 /* ShippingGroup.swift */,
+				D495E90F1D54ED6F00FCE1C2 /* Sku.swift */,
+				D495E9101D54ED6F00FCE1C2 /* SkuRemoteManagerImpl.swift */,
+				D495E9111D54ED6F00FCE1C2 /* SwiftyJSONTool.swift */,
+				D495E9121D54ED6F00FCE1C2 /* UniversalPrice.swift */,
+				D495E9131D54ED6F00FCE1C2 /* UniversalPriceApproval.swift */,
+				D495E9141D54ED6F00FCE1C2 /* UniversalPriceReview.swift */,
+				D495E9151D54ED6F00FCE1C2 /* Warehouse.swift */,
 				D495E89D1D54EC6F00FCE1C2 /* AppDelegate.swift */,
 				D495E89F1D54EC6F00FCE1C2 /* ViewController.swift */,
 				D495E8A11D54EC6F00FCE1C2 /* Main.storyboard */,
@@ -71,9 +401,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D495E8AC1D54EC6F00FCE1C2 /* Build configuration list for PBXNativeTarget "B2BSimpleApp" */;
 			buildPhases = (
+				CD46B4A72D327E8FE881B573 /* [CP] Check Pods Manifest.lock */,
 				D495E8961D54EC6F00FCE1C2 /* Sources */,
 				D495E8971D54EC6F00FCE1C2 /* Frameworks */,
 				D495E8981D54EC6F00FCE1C2 /* Resources */,
+				F757459CC1DE55686BA47AD1 /* [CP] Embed Pods Frameworks */,
+				F736CD0218469620CB68DB75 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,13 +463,163 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CD46B4A72D327E8FE881B573 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F736CD0218469620CB68DB75 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-B2BSimpleApp/Pods-B2BSimpleApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F757459CC1DE55686BA47AD1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-B2BSimpleApp/Pods-B2BSimpleApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D495E8961D54EC6F00FCE1C2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D495E9511D54ED6F00FCE1C2 /* Confirmation.swift in Sources */,
+				D495E9231D54ED6F00FCE1C2 /* CreditAccountRemoteManagerImpl.swift in Sources */,
+				D495E9661D54ED6F00FCE1C2 /* MarketingBanner.swift in Sources */,
+				D495E9471D54ED6F00FCE1C2 /* Action.swift in Sources */,
+				D495E9251D54ED6F00FCE1C2 /* DeliveryRemoteManagerImpl.swift in Sources */,
+				D495E9401D54ED6F00FCE1C2 /* ShippingAddressRemoteManagerImpl.swift in Sources */,
+				D495E9411D54ED6F00FCE1C2 /* ShippingGroupRemoteManagerImpl.swift in Sources */,
+				D495E9371D54ED6F00FCE1C2 /* PaymentGroupRemoteManagerImpl.swift in Sources */,
+				D495E9571D54ED6F00FCE1C2 /* CustSvcRep.swift in Sources */,
+				D495E95E1D54ED6F00FCE1C2 /* Inventory.swift in Sources */,
+				D495E9651D54ED6F00FCE1C2 /* LineItem.swift in Sources */,
+				D495E94B1D54ED6F00FCE1C2 /* BillingAddress.swift in Sources */,
+				D495E9361D54ED6F00FCE1C2 /* OrderRemoteManagerImpl.swift in Sources */,
+				D495E9781D54ED6F00FCE1C2 /* SwiftyJSONTool.swift in Sources */,
+				D495E91B1D54ED6F00FCE1C2 /* BillingAddressRemoteManagerImpl.swift in Sources */,
+				D495E9191D54ED6F00FCE1C2 /* AssignmentRemoteManagerImpl.swift in Sources */,
+				D495E9611D54ED6F00FCE1C2 /* LevelNCat.swift in Sources */,
+				D495E94C1D54ED6F00FCE1C2 /* Brand.swift in Sources */,
+				D495E92B1D54ED6F00FCE1C2 /* InventoryRemoteManagerImpl.swift in Sources */,
+				D495E9551D54ED6F00FCE1C2 /* CostCenter.swift in Sources */,
+				D495E9751D54ED6F00FCE1C2 /* ShippingGroup.swift in Sources */,
+				D495E9441D54ED6F00FCE1C2 /* UniversalPriceReviewRemoteManagerImpl.swift in Sources */,
+				D495E95D1D54ED6F00FCE1C2 /* HomePage.swift in Sources */,
 				D495E8A01D54EC6F00FCE1C2 /* ViewController.swift in Sources */,
+				D495E97A1D54ED6F00FCE1C2 /* UniversalPriceApproval.swift in Sources */,
+				D495E9561D54ED6F00FCE1C2 /* CreditAccount.swift in Sources */,
+				D495E91A1D54ED6F00FCE1C2 /* BannerRemoteManagerImpl.swift in Sources */,
+				D495E9741D54ED6F00FCE1C2 /* ShippingAddress.swift in Sources */,
+				D495E96A1D54ED6F00FCE1C2 /* PaymentGroup.swift in Sources */,
+				D495E94F1D54ED6F00FCE1C2 /* Catalog.swift in Sources */,
+				D495E9321D54ED6F00FCE1C2 /* LineItemRemoteManagerImpl.swift in Sources */,
+				D495E93D1D54ED6F00FCE1C2 /* SellerCompanyRemoteManagerImpl.swift in Sources */,
+				D495E9481D54ED6F00FCE1C2 /* Approval.swift in Sources */,
+				D495E95B1D54ED6F00FCE1C2 /* Footer.swift in Sources */,
+				D495E92D1D54ED6F00FCE1C2 /* LevelFourCatRemoteManagerImpl.swift in Sources */,
+				D495E9701D54ED6F00FCE1C2 /* Role.swift in Sources */,
+				D495E9241D54ED6F00FCE1C2 /* CustSvcRepRemoteManagerImpl.swift in Sources */,
 				D495E89E1D54EC6F00FCE1C2 /* AppDelegate.swift in Sources */,
+				D495E96F1D54ED6F00FCE1C2 /* RemoteManagerImpl.swift in Sources */,
+				D495E9541D54ED6F00FCE1C2 /* ContractPriceReview.swift in Sources */,
+				D495E93B1D54ED6F00FCE1C2 /* RecurringInfoRemoteManagerImpl.swift in Sources */,
+				D495E9761D54ED6F00FCE1C2 /* Sku.swift in Sources */,
+				D495E9731D54ED6F00FCE1C2 /* Shipment.swift in Sources */,
+				D495E9631D54ED6F00FCE1C2 /* LevelThreeCat.swift in Sources */,
+				D495E9451D54ED6F00FCE1C2 /* WarehouseRemoteManagerImpl.swift in Sources */,
+				D495E9201D54ED6F00FCE1C2 /* ContractPriceRemoteManagerImpl.swift in Sources */,
+				D495E95A1D54ED6F00FCE1C2 /* FixRiceSkuPromotion.swift in Sources */,
+				D495E9221D54ED6F00FCE1C2 /* CostCenterRemoteManagerImpl.swift in Sources */,
+				D495E92F1D54ED6F00FCE1C2 /* LevelOneCatRemoteManagerImpl.swift in Sources */,
+				D495E9641D54ED6F00FCE1C2 /* LevelTwoCat.swift in Sources */,
+				D495E9261D54ED6F00FCE1C2 /* EmployeeRemoteManagerImpl.swift in Sources */,
+				D495E9431D54ED6F00FCE1C2 /* UniversalPriceRemoteManagerImpl.swift in Sources */,
+				D495E96D1D54ED6F00FCE1C2 /* ProfitCenter.swift in Sources */,
+				D495E9791D54ED6F00FCE1C2 /* UniversalPrice.swift in Sources */,
+				D495E9351D54ED6F00FCE1C2 /* NaviRemoteManagerImpl.swift in Sources */,
+				D495E91E1D54ED6F00FCE1C2 /* ConfirmationRemoteManagerImpl.swift in Sources */,
+				D495E9291D54ED6F00FCE1C2 /* HeaderRemoteManagerImpl.swift in Sources */,
+				D495E9211D54ED6F00FCE1C2 /* ContractPriceReviewRemoteManagerImpl.swift in Sources */,
+				D495E9381D54ED6F00FCE1C2 /* ProcessingRemoteManagerImpl.swift in Sources */,
+				D495E96C1D54ED6F00FCE1C2 /* Product.swift in Sources */,
+				D495E9621D54ED6F00FCE1C2 /* LevelOneCat.swift in Sources */,
+				D495E9331D54ED6F00FCE1C2 /* MarketingBannerRemoteManagerImpl.swift in Sources */,
+				D495E9161D54ED6F00FCE1C2 /* AccessRemoteManagerImpl.swift in Sources */,
+				D495E9671D54ED6F00FCE1C2 /* MarketingLanding.swift in Sources */,
+				D495E9461D54ED6F00FCE1C2 /* Access.swift in Sources */,
+				D495E9271D54ED6F00FCE1C2 /* FixRiceSkuPromotionRemoteManagerImpl.swift in Sources */,
+				D495E9181D54ED6F00FCE1C2 /* ApprovalRemoteManagerImpl.swift in Sources */,
+				D495E9491D54ED6F00FCE1C2 /* Assignment.swift in Sources */,
+				D495E9531D54ED6F00FCE1C2 /* ContractPriceApproval.swift in Sources */,
+				D495E96B1D54ED6F00FCE1C2 /* Processing.swift in Sources */,
+				D495E9771D54ED6F00FCE1C2 /* SkuRemoteManagerImpl.swift in Sources */,
+				D495E9691D54ED6F00FCE1C2 /* Order.swift in Sources */,
+				D495E9521D54ED6F00FCE1C2 /* ContractPrice.swift in Sources */,
+				D495E94A1D54ED6F00FCE1C2 /* Banner.swift in Sources */,
+				D495E9311D54ED6F00FCE1C2 /* LevelTwoCatRemoteManagerImpl.swift in Sources */,
+				D495E92A1D54ED6F00FCE1C2 /* HomePageRemoteManagerImpl.swift in Sources */,
+				D495E9281D54ED6F00FCE1C2 /* FooterRemoteManagerImpl.swift in Sources */,
+				D495E96E1D54ED6F00FCE1C2 /* RecurringInfo.swift in Sources */,
+				D495E93C1D54ED6F00FCE1C2 /* RoleRemoteManagerImpl.swift in Sources */,
+				D495E9341D54ED6F00FCE1C2 /* MarketingLandingRemoteManagerImpl.swift in Sources */,
+				D495E9601D54ED6F00FCE1C2 /* LevelFourCat.swift in Sources */,
+				D495E9581D54ED6F00FCE1C2 /* Delivery.swift in Sources */,
+				D495E9301D54ED6F00FCE1C2 /* LevelThreeCatRemoteManagerImpl.swift in Sources */,
+				D495E9171D54ED6F00FCE1C2 /* ActionRemoteManagerImpl.swift in Sources */,
+				D495E95F1D54ED6F00FCE1C2 /* LevelFiveCat.swift in Sources */,
+				D495E93F1D54ED6F00FCE1C2 /* ShipmentRemoteManagerImpl.swift in Sources */,
+				D495E91C1D54ED6F00FCE1C2 /* BuyerCompanyRemoteManagerImpl.swift in Sources */,
+				D495E9391D54ED6F00FCE1C2 /* ProductRemoteManagerImpl.swift in Sources */,
+				D495E9711D54ED6F00FCE1C2 /* SellerCompany.swift in Sources */,
+				D495E9421D54ED6F00FCE1C2 /* UniversalPriceApprovalRemoteManagerImpl.swift in Sources */,
+				D495E91F1D54ED6F00FCE1C2 /* ContractPriceApprovalRemoteManagerImpl.swift in Sources */,
+				D495E9591D54ED6F00FCE1C2 /* Employee.swift in Sources */,
+				D495E9681D54ED6F00FCE1C2 /* Navi.swift in Sources */,
+				D495E95C1D54ED6F00FCE1C2 /* Header.swift in Sources */,
+				D495E94E1D54ED6F00FCE1C2 /* BuyerCompany.swift in Sources */,
+				D495E91D1D54ED6F00FCE1C2 /* CatalogRemoteManagerImpl.swift in Sources */,
+				D495E94D1D54ED6F00FCE1C2 /* BrandRemoteManagerImpl.swift in Sources */,
+				D495E93E1D54ED6F00FCE1C2 /* SellerSiteRemoteManagerImpl.swift in Sources */,
+				D495E93A1D54ED6F00FCE1C2 /* ProfitCenterRemoteManagerImpl.swift in Sources */,
+				D495E9721D54ED6F00FCE1C2 /* SellerSite.swift in Sources */,
+				D495E92E1D54ED6F00FCE1C2 /* LevelNCatRemoteManagerImpl.swift in Sources */,
+				D495E97C1D54ED6F00FCE1C2 /* Warehouse.swift in Sources */,
+				D495E92C1D54ED6F00FCE1C2 /* LevelFiveCatRemoteManagerImpl.swift in Sources */,
+				D495E97B1D54ED6F00FCE1C2 /* UniversalPriceReview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +732,7 @@
 		};
 		D495E8AD1D54EC6F00FCE1C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03CBBC23C349AEC72EAB9B43 /* Pods-B2BSimpleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = B2BSimpleApp/Info.plist;
@@ -260,6 +744,7 @@
 		};
 		D495E8AE1D54EC6F00FCE1C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A97BBA2AC19C0EF0A3B1DF80 /* Pods-B2BSimpleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = B2BSimpleApp/Info.plist;
@@ -288,6 +773,7 @@
 				D495E8AE1D54EC6F00FCE1C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
