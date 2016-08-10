@@ -8,9 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2DC0447C965E1AB16CAD8FD3 /* Pods_B2BSimpleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B85EE1695664711698A2C0E /* Pods_B2BSimpleApp.framework */; };
+		D4208FDE1D5640B400EC4707 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4208FDD1D5640B400EC4707 /* OrderView.swift */; };
+		D4208FE61D5B995A00EC4707 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = D4208FE01D5B995A00EC4707 /* Podfile */; };
+		D4208FE71D5B995A00EC4707 /* BrandRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4208FE11D5B995A00EC4707 /* BrandRemoteManagerImpl.swift */; };
+		D4208FE81D5B995A00EC4707 /* BuyerCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4208FE21D5B995A00EC4707 /* BuyerCompany.swift */; };
+		D4208FE91D5B995A00EC4707 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4208FE31D5B995A00EC4707 /* Catalog.swift */; };
+		D4208FEA1D5B995A00EC4707 /* Confirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4208FE41D5B995A00EC4707 /* Confirmation.swift */; };
+		D4208FEB1D5B995A00EC4707 /* ContractPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4208FE51D5B995A00EC4707 /* ContractPrice.swift */; };
+		D4208FED1D5B9CB300EC4707 /* LineItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4208FEC1D5B9CB300EC4707 /* LineItemCell.swift */; };
 		D495E89E1D54EC6F00FCE1C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E89D1D54EC6F00FCE1C2 /* AppDelegate.swift */; };
-		D495E8A01D54EC6F00FCE1C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E89F1D54EC6F00FCE1C2 /* ViewController.swift */; };
-		D495E8A31D54EC6F00FCE1C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D495E8A11D54EC6F00FCE1C2 /* Main.storyboard */; };
+		D495E8A01D54EC6F00FCE1C2 /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E89F1D54EC6F00FCE1C2 /* OrderViewController.swift */; };
 		D495E8A51D54EC6F00FCE1C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D495E8A41D54EC6F00FCE1C2 /* Assets.xcassets */; };
 		D495E8A81D54EC6F00FCE1C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D495E8A61D54EC6F00FCE1C2 /* LaunchScreen.storyboard */; };
 		D495E9161D54ED6F00FCE1C2 /* AccessRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8AF1D54ED6F00FCE1C2 /* AccessRemoteManagerImpl.swift */; };
@@ -68,11 +75,6 @@
 		D495E94A1D54ED6F00FCE1C2 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E31D54ED6F00FCE1C2 /* Banner.swift */; };
 		D495E94B1D54ED6F00FCE1C2 /* BillingAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E41D54ED6F00FCE1C2 /* BillingAddress.swift */; };
 		D495E94C1D54ED6F00FCE1C2 /* Brand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E51D54ED6F00FCE1C2 /* Brand.swift */; };
-		D495E94D1D54ED6F00FCE1C2 /* BrandRemoteManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E61D54ED6F00FCE1C2 /* BrandRemoteManagerImpl.swift */; };
-		D495E94E1D54ED6F00FCE1C2 /* BuyerCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E71D54ED6F00FCE1C2 /* BuyerCompany.swift */; };
-		D495E94F1D54ED6F00FCE1C2 /* Catalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8E81D54ED6F00FCE1C2 /* Catalog.swift */; };
-		D495E9511D54ED6F00FCE1C2 /* Confirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8EA1D54ED6F00FCE1C2 /* Confirmation.swift */; };
-		D495E9521D54ED6F00FCE1C2 /* ContractPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8EB1D54ED6F00FCE1C2 /* ContractPrice.swift */; };
 		D495E9531D54ED6F00FCE1C2 /* ContractPriceApproval.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8EC1D54ED6F00FCE1C2 /* ContractPriceApproval.swift */; };
 		D495E9541D54ED6F00FCE1C2 /* ContractPriceReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8ED1D54ED6F00FCE1C2 /* ContractPriceReview.swift */; };
 		D495E9551D54ED6F00FCE1C2 /* CostCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D495E8EE1D54ED6F00FCE1C2 /* CostCenter.swift */; };
@@ -121,10 +123,17 @@
 		03CBBC23C349AEC72EAB9B43 /* Pods-B2BSimpleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B2BSimpleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-B2BSimpleApp/Pods-B2BSimpleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		1B85EE1695664711698A2C0E /* Pods_B2BSimpleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_B2BSimpleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97BBA2AC19C0EF0A3B1DF80 /* Pods-B2BSimpleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-B2BSimpleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-B2BSimpleApp/Pods-B2BSimpleApp.release.xcconfig"; sourceTree = "<group>"; };
+		D4208FDD1D5640B400EC4707 /* OrderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		D4208FE01D5B995A00EC4707 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D4208FE11D5B995A00EC4707 /* BrandRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandRemoteManagerImpl.swift; sourceTree = "<group>"; };
+		D4208FE21D5B995A00EC4707 /* BuyerCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyerCompany.swift; sourceTree = "<group>"; };
+		D4208FE31D5B995A00EC4707 /* Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
+		D4208FE41D5B995A00EC4707 /* Confirmation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Confirmation.swift; sourceTree = "<group>"; };
+		D4208FE51D5B995A00EC4707 /* ContractPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractPrice.swift; sourceTree = "<group>"; };
+		D4208FEC1D5B9CB300EC4707 /* LineItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineItemCell.swift; sourceTree = "<group>"; };
 		D495E89A1D54EC6F00FCE1C2 /* B2BSimpleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = B2BSimpleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D495E89D1D54EC6F00FCE1C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D495E89F1D54EC6F00FCE1C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D495E8A21D54EC6F00FCE1C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D495E89F1D54EC6F00FCE1C2 /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
 		D495E8A41D54EC6F00FCE1C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D495E8A71D54EC6F00FCE1C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D495E8A91D54EC6F00FCE1C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -183,11 +192,6 @@
 		D495E8E31D54ED6F00FCE1C2 /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		D495E8E41D54ED6F00FCE1C2 /* BillingAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillingAddress.swift; sourceTree = "<group>"; };
 		D495E8E51D54ED6F00FCE1C2 /* Brand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brand.swift; sourceTree = "<group>"; };
-		D495E8E61D54ED6F00FCE1C2 /* BrandRemoteManagerImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrandRemoteManagerImpl.swift; sourceTree = "<group>"; };
-		D495E8E71D54ED6F00FCE1C2 /* BuyerCompany.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyerCompany.swift; sourceTree = "<group>"; };
-		D495E8E81D54ED6F00FCE1C2 /* Catalog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Catalog.swift; sourceTree = "<group>"; };
-		D495E8EA1D54ED6F00FCE1C2 /* Confirmation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Confirmation.swift; sourceTree = "<group>"; };
-		D495E8EB1D54ED6F00FCE1C2 /* ContractPrice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractPrice.swift; sourceTree = "<group>"; };
 		D495E8EC1D54ED6F00FCE1C2 /* ContractPriceApproval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractPriceApproval.swift; sourceTree = "<group>"; };
 		D495E8ED1D54ED6F00FCE1C2 /* ContractPriceReview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContractPriceReview.swift; sourceTree = "<group>"; };
 		D495E8EE1D54ED6F00FCE1C2 /* CostCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CostCenter.swift; sourceTree = "<group>"; };
@@ -282,6 +286,13 @@
 		D495E89C1D54EC6F00FCE1C2 /* B2BSimpleApp */ = {
 			isa = PBXGroup;
 			children = (
+				D4208FEC1D5B9CB300EC4707 /* LineItemCell.swift */,
+				D4208FE01D5B995A00EC4707 /* Podfile */,
+				D4208FE11D5B995A00EC4707 /* BrandRemoteManagerImpl.swift */,
+				D4208FE21D5B995A00EC4707 /* BuyerCompany.swift */,
+				D4208FE31D5B995A00EC4707 /* Catalog.swift */,
+				D4208FE41D5B995A00EC4707 /* Confirmation.swift */,
+				D4208FE51D5B995A00EC4707 /* ContractPrice.swift */,
 				D495E8AF1D54ED6F00FCE1C2 /* AccessRemoteManagerImpl.swift */,
 				D495E8B01D54ED6F00FCE1C2 /* ActionRemoteManagerImpl.swift */,
 				D495E8B11D54ED6F00FCE1C2 /* ApprovalRemoteManagerImpl.swift */,
@@ -337,11 +348,6 @@
 				D495E8E31D54ED6F00FCE1C2 /* Banner.swift */,
 				D495E8E41D54ED6F00FCE1C2 /* BillingAddress.swift */,
 				D495E8E51D54ED6F00FCE1C2 /* Brand.swift */,
-				D495E8E61D54ED6F00FCE1C2 /* BrandRemoteManagerImpl.swift */,
-				D495E8E71D54ED6F00FCE1C2 /* BuyerCompany.swift */,
-				D495E8E81D54ED6F00FCE1C2 /* Catalog.swift */,
-				D495E8EA1D54ED6F00FCE1C2 /* Confirmation.swift */,
-				D495E8EB1D54ED6F00FCE1C2 /* ContractPrice.swift */,
 				D495E8EC1D54ED6F00FCE1C2 /* ContractPriceApproval.swift */,
 				D495E8ED1D54ED6F00FCE1C2 /* ContractPriceReview.swift */,
 				D495E8EE1D54ED6F00FCE1C2 /* CostCenter.swift */,
@@ -385,11 +391,11 @@
 				D495E9141D54ED6F00FCE1C2 /* UniversalPriceReview.swift */,
 				D495E9151D54ED6F00FCE1C2 /* Warehouse.swift */,
 				D495E89D1D54EC6F00FCE1C2 /* AppDelegate.swift */,
-				D495E89F1D54EC6F00FCE1C2 /* ViewController.swift */,
-				D495E8A11D54EC6F00FCE1C2 /* Main.storyboard */,
+				D495E89F1D54EC6F00FCE1C2 /* OrderViewController.swift */,
 				D495E8A41D54EC6F00FCE1C2 /* Assets.xcassets */,
 				D495E8A61D54EC6F00FCE1C2 /* LaunchScreen.storyboard */,
 				D495E8A91D54EC6F00FCE1C2 /* Info.plist */,
+				D4208FDD1D5640B400EC4707 /* OrderView.swift */,
 			);
 			path = B2BSimpleApp;
 			sourceTree = "<group>";
@@ -455,9 +461,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4208FE61D5B995A00EC4707 /* Podfile in Resources */,
 				D495E8A81D54EC6F00FCE1C2 /* LaunchScreen.storyboard in Resources */,
 				D495E8A51D54EC6F00FCE1C2 /* Assets.xcassets in Resources */,
-				D495E8A31D54EC6F00FCE1C2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,7 +522,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D495E9511D54ED6F00FCE1C2 /* Confirmation.swift in Sources */,
 				D495E9231D54ED6F00FCE1C2 /* CreditAccountRemoteManagerImpl.swift in Sources */,
 				D495E9661D54ED6F00FCE1C2 /* MarketingBanner.swift in Sources */,
 				D495E9471D54ED6F00FCE1C2 /* Action.swift in Sources */,
@@ -536,25 +541,27 @@
 				D495E94C1D54ED6F00FCE1C2 /* Brand.swift in Sources */,
 				D495E92B1D54ED6F00FCE1C2 /* InventoryRemoteManagerImpl.swift in Sources */,
 				D495E9551D54ED6F00FCE1C2 /* CostCenter.swift in Sources */,
+				D4208FEB1D5B995A00EC4707 /* ContractPrice.swift in Sources */,
 				D495E9751D54ED6F00FCE1C2 /* ShippingGroup.swift in Sources */,
 				D495E9441D54ED6F00FCE1C2 /* UniversalPriceReviewRemoteManagerImpl.swift in Sources */,
 				D495E95D1D54ED6F00FCE1C2 /* HomePage.swift in Sources */,
-				D495E8A01D54EC6F00FCE1C2 /* ViewController.swift in Sources */,
+				D495E8A01D54EC6F00FCE1C2 /* OrderViewController.swift in Sources */,
 				D495E97A1D54ED6F00FCE1C2 /* UniversalPriceApproval.swift in Sources */,
 				D495E9561D54ED6F00FCE1C2 /* CreditAccount.swift in Sources */,
 				D495E91A1D54ED6F00FCE1C2 /* BannerRemoteManagerImpl.swift in Sources */,
 				D495E9741D54ED6F00FCE1C2 /* ShippingAddress.swift in Sources */,
 				D495E96A1D54ED6F00FCE1C2 /* PaymentGroup.swift in Sources */,
-				D495E94F1D54ED6F00FCE1C2 /* Catalog.swift in Sources */,
 				D495E9321D54ED6F00FCE1C2 /* LineItemRemoteManagerImpl.swift in Sources */,
 				D495E93D1D54ED6F00FCE1C2 /* SellerCompanyRemoteManagerImpl.swift in Sources */,
 				D495E9481D54ED6F00FCE1C2 /* Approval.swift in Sources */,
+				D4208FE81D5B995A00EC4707 /* BuyerCompany.swift in Sources */,
 				D495E95B1D54ED6F00FCE1C2 /* Footer.swift in Sources */,
 				D495E92D1D54ED6F00FCE1C2 /* LevelFourCatRemoteManagerImpl.swift in Sources */,
 				D495E9701D54ED6F00FCE1C2 /* Role.swift in Sources */,
 				D495E9241D54ED6F00FCE1C2 /* CustSvcRepRemoteManagerImpl.swift in Sources */,
 				D495E89E1D54EC6F00FCE1C2 /* AppDelegate.swift in Sources */,
 				D495E96F1D54ED6F00FCE1C2 /* RemoteManagerImpl.swift in Sources */,
+				D4208FDE1D5640B400EC4707 /* OrderView.swift in Sources */,
 				D495E9541D54ED6F00FCE1C2 /* ContractPriceReview.swift in Sources */,
 				D495E93B1D54ED6F00FCE1C2 /* RecurringInfoRemoteManagerImpl.swift in Sources */,
 				D495E9761D54ED6F00FCE1C2 /* Sku.swift in Sources */,
@@ -570,6 +577,7 @@
 				D495E9431D54ED6F00FCE1C2 /* UniversalPriceRemoteManagerImpl.swift in Sources */,
 				D495E96D1D54ED6F00FCE1C2 /* ProfitCenter.swift in Sources */,
 				D495E9791D54ED6F00FCE1C2 /* UniversalPrice.swift in Sources */,
+				D4208FEA1D5B995A00EC4707 /* Confirmation.swift in Sources */,
 				D495E9351D54ED6F00FCE1C2 /* NaviRemoteManagerImpl.swift in Sources */,
 				D495E91E1D54ED6F00FCE1C2 /* ConfirmationRemoteManagerImpl.swift in Sources */,
 				D495E9291D54ED6F00FCE1C2 /* HeaderRemoteManagerImpl.swift in Sources */,
@@ -588,16 +596,17 @@
 				D495E96B1D54ED6F00FCE1C2 /* Processing.swift in Sources */,
 				D495E9771D54ED6F00FCE1C2 /* SkuRemoteManagerImpl.swift in Sources */,
 				D495E9691D54ED6F00FCE1C2 /* Order.swift in Sources */,
-				D495E9521D54ED6F00FCE1C2 /* ContractPrice.swift in Sources */,
 				D495E94A1D54ED6F00FCE1C2 /* Banner.swift in Sources */,
 				D495E9311D54ED6F00FCE1C2 /* LevelTwoCatRemoteManagerImpl.swift in Sources */,
 				D495E92A1D54ED6F00FCE1C2 /* HomePageRemoteManagerImpl.swift in Sources */,
 				D495E9281D54ED6F00FCE1C2 /* FooterRemoteManagerImpl.swift in Sources */,
 				D495E96E1D54ED6F00FCE1C2 /* RecurringInfo.swift in Sources */,
+				D4208FE71D5B995A00EC4707 /* BrandRemoteManagerImpl.swift in Sources */,
 				D495E93C1D54ED6F00FCE1C2 /* RoleRemoteManagerImpl.swift in Sources */,
 				D495E9341D54ED6F00FCE1C2 /* MarketingLandingRemoteManagerImpl.swift in Sources */,
 				D495E9601D54ED6F00FCE1C2 /* LevelFourCat.swift in Sources */,
 				D495E9581D54ED6F00FCE1C2 /* Delivery.swift in Sources */,
+				D4208FED1D5B9CB300EC4707 /* LineItemCell.swift in Sources */,
 				D495E9301D54ED6F00FCE1C2 /* LevelThreeCatRemoteManagerImpl.swift in Sources */,
 				D495E9171D54ED6F00FCE1C2 /* ActionRemoteManagerImpl.swift in Sources */,
 				D495E95F1D54ED6F00FCE1C2 /* LevelFiveCat.swift in Sources */,
@@ -610,15 +619,14 @@
 				D495E9591D54ED6F00FCE1C2 /* Employee.swift in Sources */,
 				D495E9681D54ED6F00FCE1C2 /* Navi.swift in Sources */,
 				D495E95C1D54ED6F00FCE1C2 /* Header.swift in Sources */,
-				D495E94E1D54ED6F00FCE1C2 /* BuyerCompany.swift in Sources */,
 				D495E91D1D54ED6F00FCE1C2 /* CatalogRemoteManagerImpl.swift in Sources */,
-				D495E94D1D54ED6F00FCE1C2 /* BrandRemoteManagerImpl.swift in Sources */,
 				D495E93E1D54ED6F00FCE1C2 /* SellerSiteRemoteManagerImpl.swift in Sources */,
 				D495E93A1D54ED6F00FCE1C2 /* ProfitCenterRemoteManagerImpl.swift in Sources */,
 				D495E9721D54ED6F00FCE1C2 /* SellerSite.swift in Sources */,
 				D495E92E1D54ED6F00FCE1C2 /* LevelNCatRemoteManagerImpl.swift in Sources */,
 				D495E97C1D54ED6F00FCE1C2 /* Warehouse.swift in Sources */,
 				D495E92C1D54ED6F00FCE1C2 /* LevelFiveCatRemoteManagerImpl.swift in Sources */,
+				D4208FE91D5B995A00EC4707 /* Catalog.swift in Sources */,
 				D495E97B1D54ED6F00FCE1C2 /* UniversalPriceReview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,14 +634,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D495E8A11D54EC6F00FCE1C2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D495E8A21D54EC6F00FCE1C2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D495E8A61D54EC6F00FCE1C2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

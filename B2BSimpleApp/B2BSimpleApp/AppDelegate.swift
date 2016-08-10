@@ -16,7 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        
+        let orderNavi = UINavigationController()
+        orderNavi.title = "Home" //show it under the menu bar at the bottom of the device
+        let orderViewController = OrderViewController(nibName: nil, bundle: nil)
+        orderViewController.title = "Home" // on the top of the UI
+        orderNavi.viewControllers = [orderViewController]
+        
+       
+        
+        let tabs = UITabBarController()
+        tabs.viewControllers = [orderNavi]
+        
+        
+        
+        
+        self.window!.rootViewController = tabs;
+        self.window?.makeKeyAndVisible();
+        
         return true
+
+        
+
     }
 
     func applicationWillResignActive(application: UIApplication) {

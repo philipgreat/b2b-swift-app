@@ -24,8 +24,6 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -43,19 +41,10 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    
-    <!--  For demo use, just disable the security policy,
-     Apple encourages use https for all the traffic, this is just for test use
-     For a real application, an app should use https for all the traffic.
-     -->
-    
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <!--Include to allow all connections (DANGER)-->
-        <key>NSAllowsArbitraryLoads</key>
-        <true/>
-    </dict>
-    
-    
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 </dict>
 </plist>
