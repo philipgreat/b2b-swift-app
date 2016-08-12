@@ -39,7 +39,7 @@ class LineItemCell: UITableViewCell {
         //With code, this method will be called
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        idLabel = UILabel(frame: CGRectMake(10, 10, 80, 40))
+        idLabel = UILabel(frame: CGRectMake(10, 10, 120, 40))
         idLabel!.textColor = UIColor.brownColor()
         
        

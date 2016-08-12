@@ -27,7 +27,13 @@ class OrderViewController: UIViewController {
         tableView = UITableView(frame: UIScreen.mainScreen().bounds, style: UITableViewStyle.Plain)
         tableView!.delegate      =   self
         tableView!.dataSource    =   self
-        tableView!.registerClass(LineItemCell.self, forCellReuseIdentifier: "cell")
+        tableView!.registerClass(LineItemCell.self, forCellReuseIdentifier: "orderCell")
+        tableView!.registerClass(LineItemCell.self, forCellReuseIdentifier: "lineItemCell")
+        tableView!.registerClass(LineItemCell.self, forCellReuseIdentifier: "shippingGroupCell")
+        tableView!.registerClass(LineItemCell.self, forCellReuseIdentifier: "paymentGroupCell")
+        
+        
+        
         self.view.addSubview(self.tableView!)
         
         refreshControl = UIRefreshControl()
@@ -108,8 +114,168 @@ class OrderViewController: UIViewController {
     }
 
 }
+/*
+ 
+ 
+ Section #1 basic info
+ 
+ Section #2~N, one to one relations
+ 
+ Section #N+1 the first list
+ 
+ Section #N+2, actions
+ 
+ struct Order{
+ 
+ 
+	var	id                  :	String?
+	var	buyer               :	BuyerCompany?
+	var	seller              :	SellerCompany?
+	var	title               :	String?
+	var	costCenter          :	CostCenter?
+	var	profitCenter        :	ProfitCenter?
+	var	totalAmount         :	Double?
+	var	type                :	String?
+	var	markAsDelete        :	Bool?
+	var	confirmation        :	Confirmation?
+	var	approval            :	Approval?
+	var	processing          :	Processing?
+	var	shipment            :	Shipment?
+	var	delivery            :	Delivery?
+	var	recurringInfo       :	RecurringInfo?
+	var	version             :	Int?
+	
+	
+	var	lineItemList        :	[LineItem]?
+	var	shippingGroupList   :	[ShippingGroup]?
+	var	paymentGroupList    :	[PaymentGroup]?
+	var	actionList          :	[Action]?
+ 
+ class CellView{
+ var	object: AnyObject?
+ var cellType: String?
+ 
+ }
+ 
+ class Section{
+ var	sectionList        :	[CellView]?
+ 
+ }
+ class TableInfo{
+ 
+ var	sectionList        :	[Section]?
+ 
+ func addSection( section:Section){
+ 
+ if sectionList == nil{
+ sectionList = [Section]()
+ }
+ 
+ 
+ 
+ }
+ 
+ }
+
+ 
+ */
+//This class arranges sections and cells into a reasonable format
+
+
+extension Order {
+    
+    var sections: Int{
+    
+        return 4//order basic, lineItemList, shippingGroupList, paymengGroupList
+        
+    }
+    
+    func rowCount(forSection section:Int) ->Int{
+    
+        if section == 0 {
+            return 1 //order basic
+        }
+        if section == 1 {
+            return (self.lineItemList?.count)! //line item list count
+        }
+        if section == 2 {
+            return (self.shippingGroupList?.count)! //shipping group list count
+        }
+        if section == 3 {
+            return (self.paymentGroupList?.count)! //payment group list count
+        }
+        
+        return 0
+        
+        
+    }
+
+    func dataTypeForRow(forSection section: Int, forRow row: Int) -> String{
+        
+        if section == 0 {
+            return "order" //order basic
+        }
+        if section == 1 {
+            return "lineItem" //line item list count
+        }
+        if section == 2 {
+            return "shippingGroup" //shipping group list count
+        }
+        if section == 3 {
+            return "paymentGroup" //shipping group list count
+        }
+        return "NoDataCell"
+        
+    }
+    
+    
+    func dataForRow(forSection section: Int, forRow row: Int) ->Any{
+        
+        if section == 0 {
+            return self //order basic
+        }
+        if section == 1 {
+            return self.lineItemList?[row]
+        }
+        if section == 2 {
+            return self.shippingGroupList?[row] //shipping group list count
+        }
+        if section == 3 {
+            return self.paymentGroupList?[row]//shipping group list count
+        }
+        return "NoDataCell"
+        
+    }
+    
+    
+    func rowHeight(forSection section:Int, forRow row:Int) -> CGFloat {
+        
+        if section == 0 {
+            return 120 //order basic
+        }
+        if section == 1 {
+            return 100 //line item list count
+        }
+        if section == 2 {
+            return 100 //line item list count
+        }
+        if section == 3 {
+            return 100 //line item list count
+        }
+        
+        return 0
+        
+        
+    }
+    
+
+}
+
 
 extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
+    
+    
+    
     
     func numberOfSectionsInTableView(_tableView: UITableView) -> Int{
         
@@ -122,22 +288,32 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
             return 0;
         }
         
-        return (order?.lineItemList?.count)!
+        return (order?.sections)!
         
     }
     
     func tableView( tableView: UITableView,
                     numberOfRowsInSection section: Int) -> Int{
         
+        if order == nil {
+            return 0;
+        }
+        
         log("tableView( tableView: UITableView,numberOfRowsInSection section: Int) -> Int called")
         
-        return section+4
+        return (order?.rowCount(forSection: section))!
+        
+        
+        
     }
     
     func tableView(_tableView: UITableView,
                    sectionForSectionIndexTitle title: String,
                                                atIndex index: Int) -> Int
     {
+        if order == nil {
+            return 0;
+        }
         
         log("tableView(_tableView: UITableView,sectionForSectionIndexTitle title: String,atIndex index: Int) ")
         
@@ -146,7 +322,11 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Title - \(section)"
+        
+        
+        return order?.dataTypeForRow(forSection: section, forRow: 0)
+        
+        //return "Title - \(section)"
     }
     
     func tableView(_tableView: UITableView,
@@ -161,35 +341,55 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 94
+        return (order?.rowHeight(forSection: indexPath.section, forRow: indexPath.row))!
     }
     
     func tableView(_tableView: UITableView,
                    cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
-        let cell = tableView!.dequeueReusableCellWithIdentifier("cell",forIndexPath: indexPath) as! LineItemCell
+        
+       
+        let dataType = order?.dataTypeForRow(forSection: indexPath.section, forRow: indexPath.row)
+        
+        let cell = tableView!.dequeueReusableCellWithIdentifier("\(dataType!)Cell",forIndexPath: indexPath) as! LineItemCell
         
         
         if order == nil {
             return cell //just empty cell when null
         }
         
-        log("current sec \(indexPath.section) and current row\(indexPath.row)")
-        //cell.dynamicLabel.text = "hello\(indexPath.row)-\(indexPath.section)"
-        if indexPath.section < order?.lineItemList?.count {
-            let lineItem = order!.lineItemList![indexPath.section]
-            cell.idLabel.text = "\(lineItem.skuId!) "
-            cell.nameLabel.text = lineItem.skuName!
-            cell.qtyLabel.text = "qty: \(lineItem.quantity!)"
-            
-            //cell.dynamicLabel.text = "hello\(indexPath.row)-\(indexPath.section)"
-            
-            
-        }else{
-            
-            //cell.dynamicLabel.text = "hello\(indexPath.row)-\(indexPath.section)"
+        
+        let obj = order?.dataForRow(forSection: indexPath.section, forRow: indexPath.row)
+
+        
+        
+        if let order = obj as? Order {
+            //var storeText = someLabel.text
+            cell.idLabel.text = order.id
         }
         
+        if let order = obj as? LineItem {
+            //var storeText = someLabel.text
+            cell.idLabel.text = order.id
+        }
+        
+        if let order = obj as? ShippingGroup {
+            //var storeText = someLabel.text
+            cell.idLabel.text = order.id
+        }
+        if let order = obj as? PaymentGroup {
+            //var storeText = someLabel.text
+            cell.idLabel.text = order.id
+        }
+        
+        
+        
+        
+        
+       
+        
+        
+                
         
         //print("cell text\(cell.dynamicLabel.text)")
         //cell?.textLabel = "love is blue"
@@ -197,6 +397,53 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
         
         
     }
+    
+    
+    /*
+     
+     func tableView(_tableView: UITableView,
+     cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+     
+     
+     
+     
+     let cell = tableView!.dequeueReusableCellWithIdentifier("lineItemCell",forIndexPath: indexPath) as! LineItemCell
+     
+     
+     if order == nil {
+     return cell //just empty cell when null
+     }
+     
+     log("current sec \(indexPath.section) and current row\(indexPath.row)")
+     //cell.dynamicLabel.text = "hello\(indexPath.row)-\(indexPath.section)"
+     if indexPath.section < order?.lineItemList?.count {
+     let lineItem = order!.lineItemList![indexPath.section]
+     cell.idLabel.text = "\(lineItem.skuId!) "
+     cell.nameLabel.text = lineItem.skuName!
+     cell.qtyLabel.text = "qty: \(lineItem.quantity!)"
+     
+     //cell.dynamicLabel.text = "hello\(indexPath.row)-\(indexPath.section)"
+     
+     
+     }else{
+     
+     //cell.dynamicLabel.text = "hello\(indexPath.row)-\(indexPath.section)"
+     }
+     
+     
+     //print("cell text\(cell.dynamicLabel.text)")
+     //cell?.textLabel = "love is blue"
+     return cell;
+     
+     
+     }
+     
+     
+     
+     */
+    
+    
+    
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         print("selected\(indexPath.row)-\(indexPath.section)")
         
