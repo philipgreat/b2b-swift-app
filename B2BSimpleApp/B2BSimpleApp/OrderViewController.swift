@@ -24,13 +24,9 @@ class OrderViewController: UIViewController {
         
         
         
-        tableView = UITableView(frame: UIScreen.mainScreen().bounds, style: UITableViewStyle.Plain)
+        tableView = OrderView(frame: UIScreen.mainScreen().bounds, style: UITableViewStyle.Plain)
         tableView!.delegate      =   self
         tableView!.dataSource    =   self
-        tableView!.registerClass(LineItemCell.self, forCellReuseIdentifier: "orderCell")
-        tableView!.registerClass(LineItemCell.self, forCellReuseIdentifier: "lineItemCell")
-        tableView!.registerClass(LineItemCell.self, forCellReuseIdentifier: "shippingGroupCell")
-        tableView!.registerClass(LineItemCell.self, forCellReuseIdentifier: "paymentGroupCell")
         
         
         
@@ -71,7 +67,7 @@ class OrderViewController: UIViewController {
     func reloadData(){
         let orderRemoteManagerImpl = OrderRemoteManagerImpl()
         
-        orderRemoteManagerImpl.loadOrderDetail("O000001", orderSuccessAction: orderOK, orderErrorAction: orderError)
+        orderRemoteManagerImpl.loadOrderDetail("O000003", orderSuccessAction: orderOK, orderErrorAction: orderError)
         
 
     }
@@ -79,7 +75,7 @@ class OrderViewController: UIViewController {
         //Create a table view and add as sub view of current
         
         //self.view.addSubview(<#T##view: UIView##UIView#>)
-        
+        order.index()
         self.order = order
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -182,95 +178,6 @@ class OrderViewController: UIViewController {
 //This class arranges sections and cells into a reasonable format
 
 
-extension Order {
-    
-    var sections: Int{
-    
-        return 4//order basic, lineItemList, shippingGroupList, paymengGroupList
-        
-    }
-    
-    func rowCount(forSection section:Int) ->Int{
-    
-        if section == 0 {
-            return 1 //order basic
-        }
-        if section == 1 {
-            return (self.lineItemList?.count)! //line item list count
-        }
-        if section == 2 {
-            return (self.shippingGroupList?.count)! //shipping group list count
-        }
-        if section == 3 {
-            return (self.paymentGroupList?.count)! //payment group list count
-        }
-        
-        return 0
-        
-        
-    }
-
-    func dataTypeForRow(forSection section: Int, forRow row: Int) -> String{
-        
-        if section == 0 {
-            return "order" //order basic
-        }
-        if section == 1 {
-            return "lineItem" //line item list count
-        }
-        if section == 2 {
-            return "shippingGroup" //shipping group list count
-        }
-        if section == 3 {
-            return "paymentGroup" //shipping group list count
-        }
-        return "NoDataCell"
-        
-    }
-    
-    
-    func dataForRow(forSection section: Int, forRow row: Int) ->Any{
-        
-        if section == 0 {
-            return self //order basic
-        }
-        if section == 1 {
-            return self.lineItemList?[row]
-        }
-        if section == 2 {
-            return self.shippingGroupList?[row] //shipping group list count
-        }
-        if section == 3 {
-            return self.paymentGroupList?[row]//shipping group list count
-        }
-        return "NoDataCell"
-        
-    }
-    
-    
-    func rowHeight(forSection section:Int, forRow row:Int) -> CGFloat {
-        
-        if section == 0 {
-            return 120 //order basic
-        }
-        if section == 1 {
-            return 100 //line item list count
-        }
-        if section == 2 {
-            return 100 //line item list count
-        }
-        if section == 3 {
-            return 100 //line item list count
-        }
-        
-        return 0
-        
-        
-    }
-    
-
-}
-
 
 extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
     
@@ -324,7 +231,7 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         
-        return order?.dataTypeForRow(forSection: section, forRow: 0)
+        return order?.elementsToShow()[section]
         
         //return "Title - \(section)"
     }
@@ -349,9 +256,11 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
         
         
        
-        let dataType = order?.dataTypeForRow(forSection: indexPath.section, forRow: indexPath.row)
+        let dataType = order?.elementsToShow()[indexPath.section]
         
-        let cell = tableView!.dequeueReusableCellWithIdentifier("\(dataType!)Cell",forIndexPath: indexPath) as! LineItemCell
+        print("data type: \(dataType!)")
+        
+        let cell = tableView!.dequeueReusableCellWithIdentifier("\(dataType!)",forIndexPath: indexPath) as! UpdatableCell
         
         
         if order == nil {
@@ -361,29 +270,10 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
         
         let obj = order?.dataForRow(forSection: indexPath.section, forRow: indexPath.row)
 
+        //print("data : \(obj!)")
         
         
-        if let order = obj as? Order {
-            //var storeText = someLabel.text
-            cell.idLabel.text = order.id
-        }
-        
-        if let order = obj as? LineItem {
-            //var storeText = someLabel.text
-            cell.idLabel.text = order.id
-        }
-        
-        if let order = obj as? ShippingGroup {
-            //var storeText = someLabel.text
-            cell.idLabel.text = order.id
-        }
-        if let order = obj as? PaymentGroup {
-            //var storeText = someLabel.text
-            cell.idLabel.text = order.id
-        }
-        
-        
-        
+        cell.updateWithData(obj)
         
         
        

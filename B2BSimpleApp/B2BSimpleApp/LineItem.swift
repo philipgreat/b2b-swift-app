@@ -4,7 +4,7 @@ import Foundation
 import ObjectMapper //Use this to generate Object
 import SwiftyJSON	//Use this to verify the JSON Object
 
-struct LineItem{
+class LineItem:Any{
 
 
 	var	id                  :	String?             
@@ -33,28 +33,7 @@ struct LineItem{
 		
 }
 
-extension LineItem: Mappable{
 
-		//Confirming to the protocol Mappable of ObjectMapper
-	//Reference on https://github.com/Hearst-DD/ObjectMapper/
-	
-	init?(_ map: Map){
-    
-	}
-	
-	mutating func mapping(map: Map) {
-		//Map each field to json fields
-		id                  	<- map["id"]
-		bizOrder            	<- map["bizOrder"]
-		skuId               	<- map["skuId"]
-		skuName             	<- map["skuName"]
-		amount              	<- map["amount"]
-		quantity            	<- map["quantity"]
-		active              	<- map["active"]
-		version             	<- map["version"]
-
-	}
-}
 
 
 extension LineItem:CustomStringConvertible{
