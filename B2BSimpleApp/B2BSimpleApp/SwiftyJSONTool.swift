@@ -1066,7 +1066,7 @@ class SwiftyJSONTool{
 
 	func extractLineItem(json:JSON) -> LineItem?{
 	
-		var lineItem = LineItem()
+		let lineItem = LineItem()
 		/* Need to find another way to process object
 		guard let json = json else{
 			NSLog("There is an error here! The JSON object is nil or type is error")

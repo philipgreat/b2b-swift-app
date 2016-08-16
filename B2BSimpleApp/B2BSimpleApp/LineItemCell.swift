@@ -8,6 +8,58 @@
 
 import UIKit
 
+import Alamofire
+
+
+class SimpleImageCache {
+    
+    static let sharedCache: NSCache = {
+        let cache = NSCache()
+        cache.name = "SimpleImageCache"
+        cache.countLimit = 20 // Max 20 images in memory.
+        cache.totalCostLimit = 10*1024*1024 // Max 10MB used.
+        return cache
+    }()
+    
+}
+
+
+
+extension UIImageView {
+    public func imageFromUrl(urlString: String) {
+        
+        //if the image is in cache, then use sychronized method to fetch the image
+        
+        if let image = SimpleImageCache.sharedCache.objectForKey(urlString) as? UIImage {
+        
+            self.image = image //This may not in the main thread
+            
+            NSLog("get Image from the cache for %@",urlString)
+            return
+        
+        }
+        
+        
+        
+        Alamofire.request(.GET, urlString).response { (request, response, data, error) in
+            
+            
+            SimpleImageCache.sharedCache.setObject(UIImage(data: data!, scale:1)!, forKey: urlString, cost: (data?.length)!)
+            
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                self.image = UIImage(data: data!, scale:1)
+            }
+            
+            
+            NSLog("downloaded from URL %@",urlString)
+            
+            
+        }
+    }
+}
+
+
 class UpdatableCell: UITableViewCell{
 
     func updateWithData(object: Any){
@@ -44,12 +96,13 @@ class LineItemListCell: UpdatableCell{
     
     
     var  idLabel : UILabel!
-    var  thumbImage: UIImage!
+    var  thumbImage: UIImageView!
     
     var  nameLabel : UILabel!
     
     var  qtyLabel : UILabel!
     var  amountLabel : UILabel!
+    
     
     
     
@@ -67,6 +120,8 @@ class LineItemListCell: UpdatableCell{
         nameLabel.text = lineItem.skuName!
         qtyLabel.text = "QTY: \(lineItem.quantity!)"
         amountLabel.text = "AMT: \(lineItem.amount!)"
+        
+        thumbImage.imageFromUrl("http://img13.360buyimg.com/n1/s450x450_jfs/t2302/16/135479564/94882/c76da045/55f0e877N3c24faa3.jpg")
         
     }
     
@@ -89,7 +144,12 @@ class LineItemListCell: UpdatableCell{
         //With code, this method will be called
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        idLabel = UILabel(frame: CGRectMake(10, 10, 120, 40))
+        
+        thumbImage = UIImageView(frame: CGRectMake(0, 0, 90, 90))
+        
+        addSubview(thumbImage)
+        
+        idLabel = UILabel(frame: CGRectMake(100, 10, 120, 40))
         idLabel!.textColor = UIColor.brownColor()
         
         //idLabel.add
@@ -99,13 +159,13 @@ class LineItemListCell: UpdatableCell{
         addSubview(idLabel)
         
         
-        nameLabel = UILabel(frame: CGRectMake(100, 10, 120, 40))
+        nameLabel = UILabel(frame: CGRectMake(200, 10, 120, 40))
         nameLabel!.textColor = UIColor.redColor()
         
         addSubview(nameLabel)
         
         
-        qtyLabel = UILabel(frame: CGRectMake(230, 10, 60, 40))
+        qtyLabel = UILabel(frame: CGRectMake(330, 10, 60, 40))
         qtyLabel!.textColor = UIColor.brownColor()
         
         
@@ -114,7 +174,7 @@ class LineItemListCell: UpdatableCell{
         addSubview(qtyLabel)
         
         
-        amountLabel = UILabel(frame: CGRectMake(10, 50, 100, 40))
+        amountLabel = UILabel(frame: CGRectMake(100, 50, 100, 40))
         amountLabel!.textColor = UIColor.brownColor()
         
         
