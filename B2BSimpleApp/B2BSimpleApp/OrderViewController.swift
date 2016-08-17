@@ -20,7 +20,11 @@ class OrderViewController: UIViewController {
     
     internal func addTable()
     {
-        view.backgroundColor = .yellowColor()
+        
+        
+        
+        
+       
         
         
         
@@ -40,7 +44,7 @@ class OrderViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(OrderViewController.handleRefresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         
         
-        tableView?.addSubview(refreshControl)
+        tableView!.addSubview(refreshControl)
         
         
     }
@@ -56,9 +60,12 @@ class OrderViewController: UIViewController {
         
         NSLog("View did load.")
 
-                super.viewDidLoad()
+        super.viewDidLoad()
+        
+         view.backgroundColor = .yellowColor()
         
         addTable()
+        
         reloadData()
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -80,6 +87,8 @@ class OrderViewController: UIViewController {
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
             //must be  in UI thread to load the data, otherwise, some time not working before click some cell
+            
+            self.refreshControl.attributedTitle = NSAttributedString(string: "Success!")
             self.tableView?.reloadData()
             self.refreshControl.endRefreshing()
         })
@@ -92,7 +101,17 @@ class OrderViewController: UIViewController {
     func orderError(message:String) -> String{
         
         //message
-    
+        NSLog("There are error here: %@", message)
+        
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            //must be  in UI thread to load the data, otherwise, some time not working before click some cell
+            //self.tableView?.hidden = true
+            
+            self.refreshControl.attributedTitle = NSAttributedString(string: message)
+            self.refreshControl.endRefreshing()
+        })
+        
+        
         return message
     
     }
