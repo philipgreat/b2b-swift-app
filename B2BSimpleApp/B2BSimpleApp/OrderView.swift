@@ -36,7 +36,14 @@ import UIKit
 
 
 
-extension Order {
+class OrderView: UITableView {
+    
+    
+    //Id and the first text field
+    
+    
+    
+    var order: Order!
     
     
     
@@ -44,17 +51,18 @@ extension Order {
         
         var result = [String:Any]();
         
-        result["order"] = self
-        result["lineItemList"] = self.lineItemList
-        result["shippingGroupList"] = self.shippingGroupList
-        result["paymentGroupList"] = self.paymentGroupList
-
+        result["order"] = order
+        result["lineItemList"] = order.lineItemList
+        result["shippingGroupList"] = order.shippingGroupList
+        result["paymentGroupList"] = order.paymentGroupList
+        
         return result
         
     }
     
     func elementsToShow() -> [String]{
         let shownElements = ["order","lineItemList","shippingGroupList","paymentGroupList"]
+        //you can change the override and change the order to show the order object.
         return shownElements
         
     }
@@ -138,14 +146,6 @@ extension Order {
     }
     
     
-}
-
-
-
-
-class OrderView: UITableView {
-    
-    //Id and the first text field
     
     
     override init(frame: CGRect, style: UITableViewStyle){
@@ -155,6 +155,13 @@ class OrderView: UITableView {
         
         
     }
+    
+    func setOrder(newOrder:Order){
+        
+        self.order = newOrder
+        
+    }
+    
     /*
      Register all the related cells to the class, can be used for later
      

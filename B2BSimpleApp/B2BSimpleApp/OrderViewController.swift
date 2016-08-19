@@ -12,7 +12,7 @@ class OrderViewController: UIViewController {
 
     
     
-    var tableView:UITableView?
+    var tableView:OrderView?
     var order:Order?
     
     var refreshControl: UIRefreshControl!
@@ -75,14 +75,16 @@ class OrderViewController: UIViewController {
         let orderRemoteManagerImpl = OrderRemoteManagerImpl()
         
         orderRemoteManagerImpl.loadOrderDetail("O000003", orderSuccessAction: orderOK, orderErrorAction: orderError)
-        
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Waiting for response ... !")
 
     }
     func orderOK(order:Order)->String{
         //Create a table view and add as sub view of current
         
         //self.view.addSubview(<#T##view: UIView##UIView#>)
-        order.index()
+        tableView!.setOrder(order)
+        tableView!.index()
+        
         self.order = order
         
         dispatch_async(dispatch_get_main_queue(), { () -> Void in
@@ -214,7 +216,7 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
             return 0;
         }
         
-        return (order?.sections)!
+        return (tableView?.sections)!
         
     }
     
@@ -227,7 +229,7 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
         
         log("tableView( tableView: UITableView,numberOfRowsInSection section: Int) -> Int called")
         
-        return (order?.rowCount(forSection: section))!
+        return (self.tableView?.rowCount(forSection: section))!
         
         
         
@@ -246,14 +248,14 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
         return 1;
         
     }
-    
+    /*
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
         
         return order?.elementsToShow()[section]
         
         //return "Title - \(section)"
-    }
+    }*/
     
     func tableView(_tableView: UITableView,
                    estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat{
@@ -267,7 +269,7 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return (order?.rowHeight(forSection: indexPath.section, forRow: indexPath.row))!
+        return (self.tableView!.rowHeight(forSection: indexPath.section, forRow: indexPath.row))
     }
     
     func tableView(_tableView: UITableView,
@@ -275,11 +277,11 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
         
         
        
-        let dataType = order?.elementsToShow()[indexPath.section]
+        let dataType = tableView!.elementsToShow()[indexPath.section]
         
-        print("data type: \(dataType!)")
+        print("data type: \(dataType)")
         
-        let cell = tableView!.dequeueReusableCellWithIdentifier("\(dataType!)",forIndexPath: indexPath) as! UpdatableCell
+        let cell = tableView!.dequeueReusableCellWithIdentifier("\(dataType)",forIndexPath: indexPath) as! UpdatableCell
         
         
         if order == nil {
@@ -287,18 +289,14 @@ extension OrderViewController:UITableViewDataSource,UITableViewDelegate{
         }
         
         
-        let obj = order?.dataForRow(forSection: indexPath.section, forRow: indexPath.row)
+        let obj = tableView!.dataForRow(forSection: indexPath.section, forRow: indexPath.row)
 
         //print("data : \(obj!)")
         
         
         cell.updateWithData(obj)
         
-        
-       
-        
-        
-                
+ 
         
         //print("cell text\(cell.dynamicLabel.text)")
         //cell?.textLabel = "love is blue"

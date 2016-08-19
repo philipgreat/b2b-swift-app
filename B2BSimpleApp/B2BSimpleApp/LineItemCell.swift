@@ -11,7 +11,8 @@ import UIKit
 import Alamofire
 
 
-class SimpleImageCache {
+class SimpleCache{
+
     
     static let sharedCache: NSCache = {
         let cache = NSCache()
@@ -21,16 +22,29 @@ class SimpleImageCache {
         return cache
     }()
     
+    
+    static let queuedRequstCache: NSCache = {
+        let cache = NSCache()
+        cache.name = "QueuedRequest"
+        cache.countLimit = 20 // Max 20 images in memory.
+        cache.totalCostLimit = 10*1024*1024 // Max 10MB used.
+        return cache
+    }()
+
+
+
 }
 
 
-
 extension UIImageView {
+    
+    
+    
     public func imageFromUrl(urlString: String) {
         
         //if the image is in cache, then use sychronized method to fetch the image
         
-        if let image = SimpleImageCache.sharedCache.objectForKey(urlString) as? UIImage {
+        if let image = SimpleCache.sharedCache.objectForKey(urlString) as? UIImage {
         
             self.image = image //This may not in the main thread
             
@@ -38,17 +52,34 @@ extension UIImageView {
             return
         
         }
-        
+        //The image is not in the cache but the request has been sent to the server.....
+        //Or the request has been sent, and the server says there is an issue to request the image .....
+        //How to handle in Swift???????????????
+        /*
+         
+         
+         http://stackoverflow.com/questions/24045895/what-is-the-swift-equivalent-to-objective-cs-synchronized
+         
+         let lockQueue = dispatch_queue_create("com.test.LockQueue", nil)
+         dispatch_sync(lockQueue) {
+         // code
+         }
+         
+         
+         reference https://developer.apple.com/library/ios/documentation/Performance/Reference/GCD_libdispatch_Ref/ for more details
+         
+         
+         */
         
         
         Alamofire.request(.GET, urlString).response { (request, response, data, error) in
             
-            
-            SimpleImageCache.sharedCache.setObject(UIImage(data: data!, scale:1)!, forKey: urlString, cost: (data?.length)!)
+            let webImage = UIImage(data: data!, scale:1)
+            SimpleCache.sharedCache.setObject(webImage!, forKey: urlString, cost: (data?.length)!)
             
             
             dispatch_async(dispatch_get_main_queue()) {
-                self.image = UIImage(data: data!, scale:1)
+                self.image = webImage
             }
             
             
@@ -74,10 +105,7 @@ class UpdatableCell: UITableViewCell{
         
         
         //idLabel.frame = CGRectMake(50, 150, 200, 21)
-        
-        
-        
-        
+
     }
     
     
@@ -469,8 +497,11 @@ class OrderCell: UpdatableCell {
         //With code, this method will be called
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        
+        self.backgroundColor = UIColor.redColor()
+        
         idLabel = UILabel(frame: CGRectMake(10, 10, 120, 40))
-        idLabel!.textColor = UIColor.redColor()
+        idLabel!.textColor = UIColor.whiteColor()
         
         //idLabel.add
         
@@ -480,7 +511,7 @@ class OrderCell: UpdatableCell {
         
         
         titleLabel = UILabel(frame: CGRectMake(100, 10, 220, 40))
-        titleLabel!.textColor = UIColor.redColor()
+        titleLabel!.textColor = UIColor.whiteColor()
         
         addSubview(titleLabel)
         
