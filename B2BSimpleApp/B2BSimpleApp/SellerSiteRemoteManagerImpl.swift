@@ -16,7 +16,7 @@ class SellerSiteRemoteManagerImpl:RemoteManagerImpl,CustomStringConvertible{
 	
 	override var remoteURLPrefix:String{
 		//Every manager need to config their own URL
-		return "http://127.0.0.1:8080/naf/sellerSiteManager/"
+		return "https://philipgreat.github.io/naf/sellerSiteManager/"
 	}
 
 	func loadSellerSiteDetail(sellerSiteId:String, 

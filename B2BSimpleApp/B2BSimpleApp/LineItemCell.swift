@@ -173,7 +173,7 @@ class LineItemListCell: UpdatableCell{
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         
-        thumbImage = UIImageView(frame: CGRectMake(0, 0, 90, 90))
+        thumbImage = UIImageView(frame: CGRectMake(10, 10, 90, 90))
         
         addSubview(thumbImage)
         

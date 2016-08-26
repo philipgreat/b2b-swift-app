@@ -16,7 +16,7 @@ class RecurringInfoRemoteManagerImpl:RemoteManagerImpl,CustomStringConvertible{
 	
 	override var remoteURLPrefix:String{
 		//Every manager need to config their own URL
-		return "http://127.0.0.1:8080/naf/recurringInfoManager/"
+		return "https://philipgreat.github.io/naf/recurringInfoManager/"
 	}
 
 	func loadRecurringInfoDetail(recurringInfoId:String, 

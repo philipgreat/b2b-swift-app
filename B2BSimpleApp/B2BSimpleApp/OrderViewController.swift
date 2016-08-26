@@ -21,12 +21,7 @@ class OrderViewController: UIViewController {
     internal func addTable()
     {
         
-        
-        
-        
-       
-        
-        
+
         
         tableView = OrderView(frame: UIScreen.mainScreen().bounds, style: UITableViewStyle.Plain)
         tableView!.delegate      =   self

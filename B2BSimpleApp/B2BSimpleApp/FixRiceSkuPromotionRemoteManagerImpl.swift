@@ -16,7 +16,7 @@ class FixRiceSkuPromotionRemoteManagerImpl:RemoteManagerImpl,CustomStringConvert
 	
 	override var remoteURLPrefix:String{
 		//Every manager need to config their own URL
-		return "http://127.0.0.1:8080/naf/fixRiceSkuPromotionManager/"
+		return "https://philipgreat.github.io/naf/fixRiceSkuPromotionManager/"
 	}
 
 	func loadFixRiceSkuPromotionDetail(fixRiceSkuPromotionId:String, 

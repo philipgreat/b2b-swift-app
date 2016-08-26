@@ -16,7 +16,7 @@ class OrderRemoteManagerImpl:RemoteManagerImpl,CustomStringConvertible{
 	
 	override var remoteURLPrefix:String{
 		//Every manager need to config their own URL
-		return "http:/192.168.1.1:8080/naf/orderManager/"
+		return "https://philipgreat.github.io/naf/orderManager/"
 	}
 
 	func loadOrderDetail(orderId:String, 
@@ -32,7 +32,7 @@ class OrderRemoteManagerImpl:RemoteManagerImpl,CustomStringConvertible{
         
         let request = NSMutableURLRequest(URL: NSURL.init(string: url)!)
         request.HTTPMethod = "GET"
-        request.timeoutInterval = 5 // Set your timeout interval here.
+        request.timeoutInterval = 15 // Set your timeout interval here.
 
         
 		Alamofire.request(request).validate().responseJSON { response in

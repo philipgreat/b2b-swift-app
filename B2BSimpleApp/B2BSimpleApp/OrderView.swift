@@ -40,8 +40,17 @@ class OrderView: UITableView {
     
     
     //Id and the first text field
-    
-    
+    //This is the unified section to define the constants use in this class
+    enum sections : String {
+        case
+        order = "order",
+        lineItemList = "lineItemList",
+        shippingGroupList = "shippingGroupList",
+        paymentGroupList="paymengGroupList"
+        
+        //static let allSections = [order, lineItemList, shippingGroupList,paymentGroupList]
+        static let allSectionNames = [order.rawValue, lineItemList.rawValue,shippingGroupList.rawValue,paymentGroupList.rawValue]
+    }
     
     var order: Order!
     
@@ -51,17 +60,17 @@ class OrderView: UITableView {
         
         var result = [String:Any]();
         
-        result["order"] = order
-        result["lineItemList"] = order.lineItemList
-        result["shippingGroupList"] = order.shippingGroupList
-        result["paymentGroupList"] = order.paymentGroupList
+        result[sections.order.rawValue] = order
+        result[sections.lineItemList.rawValue] = order.lineItemList
+        result[sections.shippingGroupList.rawValue] = order.shippingGroupList
+        result[sections.paymentGroupList.rawValue] = order.paymentGroupList
         
         return result
         
     }
     
     func elementsToShow() -> [String]{
-        let shownElements = ["order","lineItemList","shippingGroupList","paymentGroupList"]
+        let shownElements = sections.allSectionNames
         //you can change the override and change the order to show the order object.
         return shownElements
         
@@ -168,10 +177,10 @@ class OrderView: UITableView {
      */
     internal func registerTableCells(){
     
-        self.registerClass(OrderCell.self, forCellReuseIdentifier: "order")
-        self.registerClass(LineItemListCell.self, forCellReuseIdentifier: "lineItemList")
-        self.registerClass(ShippingGroupListCell.self, forCellReuseIdentifier: "shippingGroupList")
-        self.registerClass(PaymentGroupListCell.self, forCellReuseIdentifier: "paymentGroupList")
+        self.registerClass(OrderCell.self, forCellReuseIdentifier: sections.order.rawValue)
+        self.registerClass(LineItemListCell.self, forCellReuseIdentifier: sections.lineItemList.rawValue)
+        self.registerClass(ShippingGroupListCell.self, forCellReuseIdentifier: sections.shippingGroupList.rawValue)
+        self.registerClass(PaymentGroupListCell.self, forCellReuseIdentifier: sections.paymentGroupList.rawValue)
         
     
     }

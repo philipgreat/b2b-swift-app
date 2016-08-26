@@ -16,7 +16,7 @@ class MarketingLandingRemoteManagerImpl:RemoteManagerImpl,CustomStringConvertibl
 	
 	override var remoteURLPrefix:String{
 		//Every manager need to config their own URL
-		return "http://127.0.0.1:8080/naf/marketingLandingManager/"
+		return "https://philipgreat.github.io/naf/marketingLandingManager/"
 	}
 
 	func loadMarketingLandingDetail(marketingLandingId:String, 
